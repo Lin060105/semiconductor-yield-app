@@ -12,7 +12,8 @@ plt.rcParams['axes.unicode_minus'] = False
 # --- 載入模型 ---
 @st.cache_resource
 def get_resources():
-    pipeline = load_model('output/final_yield_prediction_model')
+    # ✅ 正確寫法
+    pipeline = load_model('final_yield_prediction_model')
     model = pipeline.steps[-1][1] # 取出 Random Forest 模型
     dataset = pd.read_csv('data/secom_processed.csv', nrows=5)
     X_template = dataset.drop('label', axis=1)
@@ -128,3 +129,4 @@ if uploaded_file and model_loaded:
 else:
 
     st.info("👈 請上傳數據並調整門檻值來測試 AI 行為。")
+
