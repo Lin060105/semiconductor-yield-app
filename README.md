@@ -10,7 +10,7 @@
 
 ## 🚀 線上展示 (Live Demo)
 
-👉 **[點擊這裡開啟 AI 診斷系統](請把這裡改成您的Streamlit網址)**
+👉 **[點擊這裡開啟 AI 診斷系統]((https://semiconductor-yield-app-tmyu9jwd7kii2zndseugtq.streamlit.app/))**
 
 *(建議使用電腦瀏覽器開啟以獲得最佳體驗)*
 
@@ -44,15 +44,6 @@
 
 ---
 
-## 📸 系統截圖 (Screenshots)
-
-### 批量篩選與風險標記
-*(建議這裡放一張「批量快篩」且有紅字的截圖)*
-
-### 靈敏度調整與決策輔助
-*(建議這裡放一張調整 Threshold 拉桿的截圖)*
-
----
 
 ## 💻 如何在本地端執行 (Installation)
 
@@ -60,8 +51,7 @@
 
 1. **Clone 專案**
 ```bash
-git clone [https://github.com/Lin060105/semiconductor-yield-app.git](https://github.com/Lin060105/semiconductor-yield-app.git)
-cd semiconductor-yield-app
+git clone https://github.com/Lin060105/semiconductor-yield-app.git
 ```
 
 2. **安裝依賴套件**
