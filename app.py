@@ -52,7 +52,7 @@ uploaded_file = st.sidebar.file_uploader("上傳晶圓數據 (CSV)", type="csv")
 
 # 必殺範例下載
 if st.sidebar.button("📥 下載含異常的測試檔"):
-    df = pd.read_csv('data/secom_processed.csv')
+    df = pd.read_csv('secom_processed.csv')
     # 抓 5 個壞的，15 個好的
     fail = df[df['label']==1].sample(5, random_state=123)
     pass_ = df[df['label']==0].sample(15, random_state=123)
@@ -129,4 +129,5 @@ if uploaded_file and model_loaded:
 else:
 
     st.info("👈 請上傳數據並調整門檻值來測試 AI 行為。")
+
 
