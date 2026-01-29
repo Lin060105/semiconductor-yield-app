@@ -22,8 +22,11 @@ def get_resources():
 try:
     pipeline, explainer, X_template = get_resources()
     model_loaded = True
-except:
-    st.error("模型載入失敗，請確認檔案路徑。")
+except Exception as e:
+    st.error(f"模型載入失敗，詳細錯誤：{e}")
+    # 為了除錯，我們多印一點資訊
+    import os
+    st.write("目前路徑下的檔案：", os.listdir('.'))
     model_loaded = False
 
 # --- 工具函數 ---
@@ -123,4 +126,5 @@ if uploaded_file and model_loaded:
                 st.success("🎉 本批次無異常 (可嘗試調低門檻值)")
 
 else:
+
     st.info("👈 請上傳數據並調整門檻值來測試 AI 行為。")
