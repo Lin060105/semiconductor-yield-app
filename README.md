@@ -50,8 +50,10 @@
 如果您想在自己的電腦上運行此專案：
 
 1. **Clone 專案**
-   ```bash
+   
    git clone [https://github.com/Lin060105/semiconductor-yield-app.git](https://github.com/Lin060105/semiconductor-yield-app.git)
+   
+   ```bash
    cd semiconductor-yield-app
 
 2. **安裝依賴套件**
