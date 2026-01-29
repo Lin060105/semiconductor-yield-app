@@ -10,7 +10,7 @@
 
 ## 🚀 線上展示 (Live Demo)
 
-👉 **[點擊這裡開啟 AI 診斷系統]((https://semiconductor-yield-app-tmyu9jwd7kii2zndseugtq.streamlit.app/))**
+👉 **[點擊這裡開啟 AI 診斷系統](https://semiconductor-yield-app-tmyu9jwd7kii2zndseugtq.streamlit.app)**
 
 *(建議使用電腦瀏覽器開啟以獲得最佳體驗)*
 
@@ -50,9 +50,9 @@
 如果您想在自己的電腦上運行此專案：
 
 1. **Clone 專案**
-```bash
-git clone https://github.com/Lin060105/semiconductor-yield-app.git
-```
+   ```bash
+   git clone [https://github.com/Lin060105/semiconductor-yield-app.git](https://github.com/Lin060105/semiconductor-yield-app.git)
+   cd semiconductor-yield-app
 
 2. **安裝依賴套件**
 ```bash
