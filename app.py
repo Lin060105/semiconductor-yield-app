@@ -17,7 +17,7 @@ def get_resources():
     pipeline = load_model('final_yield_prediction_model')
     model = pipeline.steps[-1][1] # 取出 Random Forest 模型
     
-    # 2. 載入特徵清單 (取代原本讀取 CSV 的動作)
+    # 2. 載入特徵清單
     with open('required_features.pkl', 'rb') as f:
         feature_names = pickle.load(f)
     
@@ -53,9 +53,6 @@ threshold = st.sidebar.slider("異常判定門檻 (Threshold)", 0.0, 1.0, 0.5, 0
 
 st.sidebar.markdown("---")
 uploaded_file = st.sidebar.file_uploader("上傳晶圓數據 (CSV)", type="csv")
-
-# 測試資料下載 (不需要依賴原始 CSV 了，這裡我們用假資料生成結構即可，或直接隱藏此功能)
-# 為了演示方便，我們這裡改為「若有上傳檔案則顯示」
 
 # --- 主畫面 ---
 st.title("🏭 半導體良率智慧診斷系統")
@@ -109,7 +106,7 @@ if uploaded_file and model_loaded:
                         fig, ax = plt.subplots()
                         shap.plots.waterfall(
                             shap.Explanation(shap_val, explainer.expected_value[1], 
-                                           df_process.iloc[idx], feature_names),
+                                            df_process.iloc[idx], feature_names),
                             show=False, max_display=10
                         )
                         st.pyplot(fig)
@@ -134,7 +131,8 @@ if uploaded_file and model_loaded:
                     res['Risk_Score'] = probs[fails.index]
                     # 依照風險分數排序
                     res = res.sort_values('Risk_Score', ascending=False)
-                    st.dataframe(res[['Risk_Score'] + feature_names[:5]].style.background_gradient(subset=['Risk_Score'], cmap='Reds'))
+                    # 修正：移除 style.background_gradient，避免 matplotlib 版本衝突
+                    st.dataframe(res[['Risk_Score'] + feature_names[:5]]) 
                 else:
                     st.success("✅ 本批次未發現異常晶圓！")
                     
