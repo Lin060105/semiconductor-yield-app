@@ -1,9 +1,8 @@
 streamlit
 pandas
-numpy
-matplotlib
-seaborn
 shap==0.41.0
-scikit-learn
+matplotlib
 pycaret
+numpy<1.24
 joblib
+scipy
