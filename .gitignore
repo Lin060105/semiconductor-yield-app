@@ -1,0 +1,19 @@
+# Python 暫存檔
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虛擬環境 (如果有的話)
+venv/
+env/
+.env
+
+# PyCaret 產生的過渡檔案
+logs/
+
+# IDE 設定檔
+.vscode/
+.idea/
+
+# Mac 系統檔
+.DS_Store
