@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# PyCaret/Logs
+logs.log
+*.pkl
+!final_yield_prediction_model.pkl
+!required_features.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+output/

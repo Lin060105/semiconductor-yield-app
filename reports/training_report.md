@@ -14,17 +14,21 @@
 ## 3. Visualizations (視覺化分析)
 
 ### Confusion Matrix
-(請在此處插入 Confusion Matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 *分析：模型在預測 "Label 0" (良品) 時非常準確，但在 "Label 1" (不良品) 上幾乎失效。這證實了資料極度不平衡 (Imbalance) 是主要痛點。*
 
 ### Feature Importance
-(請在此處插入 Feature Importance.png)
+![Feature Importance](feature_importance.png)
 *分析：Random Forest 識別出的前幾名關鍵感測器特徵，將作為後續製程改善的重點監控對象。*
+
+### ROC / AUC Curve
+![AUC Curve](auc.png)
+*分析：AUC 曲線顯示模型在不同閾值下的表現，0.72 的分數表示模型具有一定的區分能力，但仍有很大優化空間。*
 
 ## 4. Phase 1 Conclusion & Next Steps (結論與下一步)
 目前的模型雖然有高達 93% 的準確率，但這是一個「陷阱」。對於半導體製程而言，**Recall (抓出壞品)** 比 Accuracy 更重要。
 
 **Phase 2 優化策略：**
 1.  **引入 SMOTE/ADASYN**：透過演算法生成虛擬的不良品樣本，強迫模型學習 "Fail" 的特徵。
-2.  **更換模型**：嘗試對不平衡資料更敏感的 XGBoost 或 LightGBM。
+2.  **更換模型**：嘗試對不平衡資料更敏感的 XGBoost 或 LightGBM (或是 CatBoost)。
 3.  **調整閾值 (Threshold Tuning)**：犧牲部分 Precision 來換取更高的 Recall。

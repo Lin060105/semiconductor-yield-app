@@ -1,19 +1,31 @@
-# Python 暫存檔
+# --- Python & 環境 ---
 __pycache__/
 *.py[cod]
 *$py.class
-
-# 虛擬環境 (如果有的話)
 venv/
 env/
 .env
+.ipynb_checkpoints/
 
-# PyCaret 產生的過渡檔案
-logs/
-
-# IDE 設定檔
+# --- IDE & 系統檔 ---
 .vscode/
 .idea/
-
-# Mac 系統檔
 .DS_Store
+
+# --- ML 訓練產生的雜物 (重點新增) ---
+catboost_info/
+logs/
+*.log
+*.pkl
+
+# --- 報告資料夾清理 ---
+# 只保留圖片 (.png) 和報告文件 (.md)
+# 排除 reports 資料夾內跑出的 CSV、IPYNB 或其他暫存檔
+reports/*.csv
+reports/*.ipynb
+reports/catboost_info/
+reports/.ipynb_checkpoints/
+
+# --- 資料夾排除 ---
+# 如果你有不需要上傳的大型資料集，可以取消下面這行的註解
+# data/secom_processed.csv
