@@ -107,6 +107,28 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## 🐳 Docker 快速部署
+
+無需安裝 Python 環境，直接使用 Docker 啟動系統：
+
+### 1. 建置映像檔 (Build)
+```bash
+docker build -t semiconductor-yield-app .
+
+```markdown
+### 2. 啟動容器 (Run)
+```bash
+# 啟動後請訪問 http://localhost:8501
+docker run -p 8501:8501 semiconductor-yield-app
+
+```markdown
+### 3. (開發者) 在容器內執行測試
+```bash
+# 使用 --entrypoint 確保能覆蓋預設啟動指令
+# -v $(pwd):/app 讓你可以測試本機修改的程式碼，無需重新 Build
+# (Windows PowerShell 使用者請將 $(pwd) 改為 ${PWD})
+docker run --rm -v $(pwd):/app --entrypoint pytest semiconductor-yield-app
+
 ## 📝 開發紀錄
 
 - **Level 1**: 數據清洗與 UCI 資料集特徵工程。

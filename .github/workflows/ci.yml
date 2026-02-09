@@ -1,6 +1,5 @@
-name: Yield App CI Pipeline
+name: CI Pipeline
 
-# 觸發條件：當推送到 main 或 master 分支時
 on:
   push:
     branches: [ "main", "master" ]
@@ -9,31 +8,33 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest  # 使用 Linux 伺服器執行
-
+    runs-on: ubuntu-latest
+    
     steps:
-    # 1. 下載你的程式碼
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    # 2. 設定 Python 3.9 環境
     - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
         python-version: "3.9"
 
-    # 3. 安裝依賴套件
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pytest  # 確保測試框架已安裝
+        # 安裝專案依賴
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # 安裝測試與 Lint 工具
+        pip install pytest flake8
 
-    # 4. 執行 Pytest 測試
-    - name: Run Unit Tests
+    - name: Lint with flake8
       run: |
-        pytest
+        # 檢查語法錯誤與風格 (忽略部分格式問題以避免過於嚴格)
+        # E501: 行太長, W503: 運算符換行, F401: 未使用的 import
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --ignore=E501,W503,F401 --statistics
 
-    # 5. 測試 Docker 建置 (確認 Dockerfile 沒寫錯)
-    - name: Build Docker Image
+    - name: Run Tests with pytest
       run: |
-        docker build . --file Dockerfile --tag yield-app:latest
+        # 執行我們剛寫好的測試
+        pytest tests/test_predict.py

@@ -3620,3 +3620,2063 @@
 2026-02-09 13:54:12,332:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   from pkg_resources import resource_filename
 
+2026-02-09 14:19:29,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:19:29,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:19:29,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:19:29,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:19:30,982:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-09 14:19:31,363:INFO:PyCaret ClassificationExperiment
+2026-02-09 14:19:31,363:INFO:Logging name: clf-default-name
+2026-02-09 14:19:31,364:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-02-09 14:19:31,364:INFO:version 3.2.0
+2026-02-09 14:19:31,364:INFO:Initializing setup()
+2026-02-09 14:19:31,364:INFO:self.USI: 1c33
+2026-02-09 14:19:31,364:INFO:self._variable_keys: {'y', 'y_train', 'fold_shuffle_param', 'target_param', 'pipeline', 'memory', 'exp_name_log', 'seed', 'X_test', 'X', 'fold_groups_param', 'fold_generator', 'fix_imbalance', 'idx', 'data', 'gpu_n_jobs_param', 'USI', 'y_test', 'gpu_param', 'X_train', 'log_plots_param', 'n_jobs_param', 'logging_param', '_ml_usecase', '_available_plots', 'html_param', 'exp_id', 'is_multiclass'}
+2026-02-09 14:19:31,364:INFO:Checking environment
+2026-02-09 14:19:31,364:INFO:python_version: 3.9.25
+2026-02-09 14:19:31,364:INFO:python_build: ('main', 'Nov  3 2025 22:44:01')
+2026-02-09 14:19:31,364:INFO:machine: AMD64
+2026-02-09 14:19:31,380:INFO:platform: Windows-10-10.0.26100-SP0
+2026-02-09 14:19:31,381:INFO:Memory: svmem(total=34031001600, available=17721606144, percent=47.9, used=16309395456, free=17721606144)
+2026-02-09 14:19:31,381:INFO:Physical Core: 12
+2026-02-09 14:19:31,381:INFO:Logical Core: 16
+2026-02-09 14:19:31,381:INFO:Checking libraries
+2026-02-09 14:19:31,381:INFO:System:
+2026-02-09 14:19:31,381:INFO:    python: 3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]
+2026-02-09 14:19:31,381:INFO:executable: D:\anaconda3\envs\yield_lab\python.exe
+2026-02-09 14:19:31,381:INFO:   machine: Windows-10-10.0.26100-SP0
+2026-02-09 14:19:31,381:INFO:PyCaret required dependencies:
+2026-02-09 14:19:31,381:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:32,233:INFO:                 pip: 26.0.1
+2026-02-09 14:19:32,233:INFO:          setuptools: 80.9.0
+2026-02-09 14:19:32,234:INFO:             pycaret: 3.2.0
+2026-02-09 14:19:32,234:INFO:             IPython: 8.18.1
+2026-02-09 14:19:32,234:INFO:          ipywidgets: 8.1.8
+2026-02-09 14:19:32,234:INFO:                tqdm: 4.67.3
+2026-02-09 14:19:32,234:INFO:               numpy: 1.23.0
+2026-02-09 14:19:32,234:INFO:              pandas: 1.5.3
+2026-02-09 14:19:32,234:INFO:              jinja2: 3.1.6
+2026-02-09 14:19:32,234:INFO:               scipy: 1.10.1
+2026-02-09 14:19:32,234:INFO:              joblib: 1.3.2
+2026-02-09 14:19:32,234:INFO:             sklearn: 1.2.2
+2026-02-09 14:19:32,234:INFO:                pyod: 2.0.6
+2026-02-09 14:19:32,234:INFO:            imblearn: 0.12.4
+2026-02-09 14:19:32,234:INFO:   category_encoders: 2.6.4
+2026-02-09 14:19:32,234:INFO:            lightgbm: 4.6.0
+2026-02-09 14:19:32,234:INFO:               numba: 0.58.1
+2026-02-09 14:19:32,234:INFO:            requests: 2.32.5
+2026-02-09 14:19:32,234:INFO:          matplotlib: 3.9.4
+2026-02-09 14:19:32,234:INFO:          scikitplot: 0.3.7
+2026-02-09 14:19:32,234:INFO:         yellowbrick: 1.5
+2026-02-09 14:19:32,235:INFO:              plotly: 5.24.1
+2026-02-09 14:19:32,235:INFO:    plotly-resampler: Not installed
+2026-02-09 14:19:32,235:INFO:             kaleido: 1.2.0
+2026-02-09 14:19:32,235:INFO:           schemdraw: 0.15
+2026-02-09 14:19:32,235:INFO:         statsmodels: 0.14.6
+2026-02-09 14:19:32,235:INFO:              sktime: 0.21.1
+2026-02-09 14:19:32,235:INFO:               tbats: 1.1.3
+2026-02-09 14:19:32,235:INFO:            pmdarima: 2.0.4
+2026-02-09 14:19:32,235:INFO:              psutil: 7.2.2
+2026-02-09 14:19:32,235:INFO:          markupsafe: 2.1.5
+2026-02-09 14:19:32,235:INFO:             pickle5: Not installed
+2026-02-09 14:19:32,235:INFO:         cloudpickle: 2.2.1
+2026-02-09 14:19:32,235:INFO:         deprecation: 2.1.0
+2026-02-09 14:19:32,235:INFO:              xxhash: 3.6.0
+2026-02-09 14:19:32,235:INFO:           wurlitzer: Not installed
+2026-02-09 14:19:32,235:INFO:PyCaret optional dependencies:
+2026-02-09 14:19:35,364:INFO:                shap: 0.41.0
+2026-02-09 14:19:35,364:INFO:           interpret: 0.6.6
+2026-02-09 14:19:35,364:INFO:                umap: 0.5.7
+2026-02-09 14:19:35,364:INFO:     ydata_profiling: 4.6.0
+2026-02-09 14:19:35,365:INFO:  explainerdashboard: 0.4.2.2
+2026-02-09 14:19:35,365:INFO:             autoviz: Not installed
+2026-02-09 14:19:35,365:INFO:           fairlearn: 0.7.0
+2026-02-09 14:19:35,365:INFO:          deepchecks: Not installed
+2026-02-09 14:19:35,365:INFO:             xgboost: 2.1.4
+2026-02-09 14:19:35,365:INFO:            catboost: 1.2.8
+2026-02-09 14:19:35,365:INFO:              kmodes: 0.12.2
+2026-02-09 14:19:35,365:INFO:             mlxtend: 0.23.1
+2026-02-09 14:19:35,365:INFO:       statsforecast: 1.5.0
+2026-02-09 14:19:35,365:INFO:        tune_sklearn: 0.5.0
+2026-02-09 14:19:35,365:INFO:                 ray: 2.51.2
+2026-02-09 14:19:35,365:INFO:            hyperopt: 0.2.7
+2026-02-09 14:19:35,365:INFO:              optuna: 4.7.0
+2026-02-09 14:19:35,365:INFO:               skopt: 0.10.2
+2026-02-09 14:19:35,365:INFO:              mlflow: 3.1.4
+2026-02-09 14:19:35,365:INFO:              gradio: 3.50.2
+2026-02-09 14:19:35,365:INFO:             fastapi: 0.125.0
+2026-02-09 14:19:35,365:INFO:             uvicorn: 0.39.0
+2026-02-09 14:19:35,365:INFO:              m2cgen: 0.10.0
+2026-02-09 14:19:35,365:INFO:           evidently: 0.2.8
+2026-02-09 14:19:35,365:INFO:               fugue: 0.8.6
+2026-02-09 14:19:35,365:INFO:           streamlit: 1.50.0
+2026-02-09 14:19:35,365:INFO:             prophet: Not installed
+2026-02-09 14:19:35,365:INFO:None
+2026-02-09 14:19:35,365:INFO:Set up data.
+2026-02-09 14:19:35,463:INFO:Set up folding strategy.
+2026-02-09 14:19:35,464:INFO:Set up train/test split.
+2026-02-09 14:19:35,477:INFO:Set up index.
+2026-02-09 14:19:35,478:INFO:Assigning column types.
+2026-02-09 14:19:35,489:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-02-09 14:19:35,523:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,525:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,553:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,554:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,621:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,623:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,648:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,650:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,650:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-02-09 14:19:35,689:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,710:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,712:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,746:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-09 14:19:35,769:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,771:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,771:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-02-09 14:19:35,830:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,833:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,892:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:35,894:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:35,896:INFO:Preparing preprocessing pipeline...
+2026-02-09 14:19:35,898:INFO:Set up simple imputation.
+2026-02-09 14:19:35,898:INFO:Set up imbalanced handling.
+2026-02-09 14:19:35,973:INFO:Finished creating preprocessing pipeline.
+2026-02-09 14:19:35,983:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated'))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=123,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False)
+2026-02-09 14:19:35,983:INFO:Creating final display dataframe.
+2026-02-09 14:19:36,232:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target             label
+2                   Target type            Binary
+3           Original data shape       (1567, 475)
+4        Transformed data shape       (2517, 475)
+5   Transformed train set shape       (2046, 475)
+6    Transformed test set shape        (471, 475)
+7              Numeric features               474
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12                Fix imbalance              True
+13         Fix imbalance method             SMOTE
+14               Fold Generator   StratifiedKFold
+15                  Fold Number                10
+16                     CPU Jobs                -1
+17                      Use GPU             False
+18               Log Experiment             False
+19              Experiment Name  clf-default-name
+20                          USI              1c33
+2026-02-09 14:19:36,296:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:36,299:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:36,361:INFO:Soft dependency imported: xgboost: 2.1.4
+2026-02-09 14:19:36,363:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-09 14:19:36,364:INFO:setup() successfully completed in 5.0s...............
+2026-02-09 14:19:36,364:INFO:Initializing compare_models()
+2026-02-09 14:19:36,364:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, include=['rf', 'xgboost', 'lightgbm'], fold=None, round=4, cross_validation=True, sort=AUC, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=False, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, 'include': ['rf', 'xgboost', 'lightgbm'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'AUC', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': False, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2026-02-09 14:19:36,364:INFO:Checking exceptions
+2026-02-09 14:19:36,374:INFO:Preparing display monitor
+2026-02-09 14:19:36,377:INFO:Initializing Random Forest Classifier
+2026-02-09 14:19:36,377:INFO:Total runtime is 0.0 minutes
+2026-02-09 14:19:36,377:INFO:SubProcess create_model() called ==================================
+2026-02-09 14:19:36,377:INFO:Initializing create_model()
+2026-02-09 14:19:36,377:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000011F498D8CD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-02-09 14:19:36,377:INFO:Checking exceptions
+2026-02-09 14:19:36,377:INFO:Importing libraries
+2026-02-09 14:19:36,377:INFO:Copying training dataset
+2026-02-09 14:19:36,392:INFO:Defining folds
+2026-02-09 14:19:36,392:INFO:Declaring metric variables
+2026-02-09 14:19:36,392:INFO:Importing untrained model
+2026-02-09 14:19:36,393:INFO:Random Forest Classifier Imported successfully
+2026-02-09 14:19:36,393:INFO:Starting cross validation
+2026-02-09 14:19:36,395:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-09 14:19:40,196:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,200:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,214:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,226:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,232:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,249:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,261:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,262:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,274:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:40,296:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:47,931:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,932:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,946:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,950:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,963:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,964:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:47,965:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:48,026:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:48,199:INFO:Calculating mean and std
+2026-02-09 14:19:48,200:INFO:Creating metrics dataframe
+2026-02-09 14:19:48,207:INFO:Uploading results into container
+2026-02-09 14:19:48,209:INFO:Uploading model into container now
+2026-02-09 14:19:48,209:INFO:_master_model_container: 1
+2026-02-09 14:19:48,210:INFO:_display_container: 2
+2026-02-09 14:19:48,210:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-09 14:19:48,210:INFO:create_model() successfully completed......................................
+2026-02-09 14:19:48,376:INFO:SubProcess create_model() end ==================================
+2026-02-09 14:19:48,376:INFO:Creating metrics dataframe
+2026-02-09 14:19:48,381:INFO:Initializing Extreme Gradient Boosting
+2026-02-09 14:19:48,381:INFO:Total runtime is 0.20005279779434204 minutes
+2026-02-09 14:19:48,381:INFO:SubProcess create_model() called ==================================
+2026-02-09 14:19:48,381:INFO:Initializing create_model()
+2026-02-09 14:19:48,381:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000011F498D8CD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-02-09 14:19:48,381:INFO:Checking exceptions
+2026-02-09 14:19:48,381:INFO:Importing libraries
+2026-02-09 14:19:48,381:INFO:Copying training dataset
+2026-02-09 14:19:48,396:INFO:Defining folds
+2026-02-09 14:19:48,396:INFO:Declaring metric variables
+2026-02-09 14:19:48,396:INFO:Importing untrained model
+2026-02-09 14:19:48,397:INFO:Extreme Gradient Boosting Imported successfully
+2026-02-09 14:19:48,397:INFO:Starting cross validation
+2026-02-09 14:19:48,399:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-09 14:19:52,320:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:52,335:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:52,350:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:52,375:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:52,379:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:52,382:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:19:54,587:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:59,690:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:19:59,947:INFO:Calculating mean and std
+2026-02-09 14:19:59,948:INFO:Creating metrics dataframe
+2026-02-09 14:19:59,954:INFO:Uploading results into container
+2026-02-09 14:19:59,955:INFO:Uploading model into container now
+2026-02-09 14:19:59,956:INFO:_master_model_container: 2
+2026-02-09 14:19:59,956:INFO:_display_container: 2
+2026-02-09 14:19:59,957:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=-1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2026-02-09 14:19:59,958:INFO:create_model() successfully completed......................................
+2026-02-09 14:20:00,108:INFO:SubProcess create_model() end ==================================
+2026-02-09 14:20:00,108:INFO:Creating metrics dataframe
+2026-02-09 14:20:00,113:INFO:Initializing Light Gradient Boosting Machine
+2026-02-09 14:20:00,113:INFO:Total runtime is 0.3955844759941101 minutes
+2026-02-09 14:20:00,113:INFO:SubProcess create_model() called ==================================
+2026-02-09 14:20:00,113:INFO:Initializing create_model()
+2026-02-09 14:20:00,113:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x0000011F498D8CD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-02-09 14:20:00,113:INFO:Checking exceptions
+2026-02-09 14:20:00,113:INFO:Importing libraries
+2026-02-09 14:20:00,113:INFO:Copying training dataset
+2026-02-09 14:20:00,124:INFO:Defining folds
+2026-02-09 14:20:00,125:INFO:Declaring metric variables
+2026-02-09 14:20:00,125:INFO:Importing untrained model
+2026-02-09 14:20:00,125:INFO:Light Gradient Boosting Machine Imported successfully
+2026-02-09 14:20:00,125:INFO:Starting cross validation
+2026-02-09 14:20:00,128:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-09 14:20:08,708:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:08,845:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:08,870:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:08,882:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:08,891:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:08,917:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-09 14:20:09,071:INFO:Calculating mean and std
+2026-02-09 14:20:09,072:INFO:Creating metrics dataframe
+2026-02-09 14:20:09,075:INFO:Uploading results into container
+2026-02-09 14:20:09,076:INFO:Uploading model into container now
+2026-02-09 14:20:09,076:INFO:_master_model_container: 3
+2026-02-09 14:20:09,076:INFO:_display_container: 2
+2026-02-09 14:20:09,076:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2026-02-09 14:20:09,076:INFO:create_model() successfully completed......................................
+2026-02-09 14:20:09,200:INFO:SubProcess create_model() end ==================================
+2026-02-09 14:20:09,200:INFO:Creating metrics dataframe
+2026-02-09 14:20:09,207:INFO:Initializing create_model()
+2026-02-09 14:20:09,207:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2026-02-09 14:20:09,207:INFO:Checking exceptions
+2026-02-09 14:20:09,208:INFO:Importing libraries
+2026-02-09 14:20:09,208:INFO:Copying training dataset
+2026-02-09 14:20:09,223:INFO:Defining folds
+2026-02-09 14:20:09,223:INFO:Declaring metric variables
+2026-02-09 14:20:09,224:INFO:Importing untrained model
+2026-02-09 14:20:09,224:INFO:Declaring custom model
+2026-02-09 14:20:09,224:INFO:Random Forest Classifier Imported successfully
+2026-02-09 14:20:09,227:INFO:Cross validation set to False
+2026-02-09 14:20:09,227:INFO:Fitting Model
+2026-02-09 14:20:10,046:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-09 14:20:10,046:INFO:create_model() successfully completed......................................
+2026-02-09 14:20:10,189:INFO:_master_model_container: 3
+2026-02-09 14:20:10,189:INFO:_display_container: 2
+2026-02-09 14:20:10,189:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-09 14:20:10,189:INFO:compare_models() successfully completed......................................
+2026-02-09 14:20:10,196:INFO:Initializing plot_model()
+2026-02-09 14:20:10,196:INFO:plot_model(plot=confusion_matrix, fold=None, verbose=True, display=None, display_format=None, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, system=True)
+2026-02-09 14:20:10,196:INFO:Checking exceptions
+2026-02-09 14:20:10,257:INFO:Preloading libraries
+2026-02-09 14:20:10,265:INFO:Copying training dataset
+2026-02-09 14:20:10,265:INFO:Plot type: confusion_matrix
+2026-02-09 14:20:10,516:INFO:Fitting Model
+2026-02-09 14:20:10,517:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+
+2026-02-09 14:20:10,517:INFO:Scoring test/hold-out set
+2026-02-09 14:20:10,625:INFO:Saving 'Confusion Matrix.png'
+2026-02-09 14:20:10,710:INFO:Visual Rendered Successfully
+2026-02-09 14:20:10,852:INFO:plot_model() successfully completed......................................
+2026-02-09 14:20:10,854:INFO:Initializing plot_model()
+2026-02-09 14:20:10,854:INFO:plot_model(plot=auc, fold=None, verbose=True, display=None, display_format=None, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, system=True)
+2026-02-09 14:20:10,854:INFO:Checking exceptions
+2026-02-09 14:20:10,892:INFO:Preloading libraries
+2026-02-09 14:20:10,898:INFO:Copying training dataset
+2026-02-09 14:20:10,898:INFO:Plot type: auc
+2026-02-09 14:20:11,089:INFO:Fitting Model
+2026-02-09 14:20:11,089:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+
+2026-02-09 14:20:11,089:INFO:Scoring test/hold-out set
+2026-02-09 14:20:11,196:INFO:Saving 'AUC.png'
+2026-02-09 14:20:11,373:INFO:Visual Rendered Successfully
+2026-02-09 14:20:11,519:INFO:plot_model() successfully completed......................................
+2026-02-09 14:20:11,521:INFO:Initializing plot_model()
+2026-02-09 14:20:11,521:INFO:plot_model(plot=feature, fold=None, verbose=True, display=None, display_format=None, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, system=True)
+2026-02-09 14:20:11,521:INFO:Checking exceptions
+2026-02-09 14:20:11,553:INFO:Preloading libraries
+2026-02-09 14:20:11,562:INFO:Copying training dataset
+2026-02-09 14:20:11,562:INFO:Plot type: feature
+2026-02-09 14:20:11,562:WARNING:No coef_ found. Trying feature_importances_
+2026-02-09 14:20:11,703:INFO:Saving 'Feature Importance.png'
+2026-02-09 14:20:11,832:INFO:Visual Rendered Successfully
+2026-02-09 14:20:11,961:INFO:plot_model() successfully completed......................................
+2026-02-09 14:20:11,964:INFO:Initializing interpret_model()
+2026-02-09 14:20:11,964:INFO:interpret_model(estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=False, self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>)
+2026-02-09 14:20:11,964:INFO:Checking exceptions
+2026-02-09 14:20:11,964:INFO:Soft dependency imported: shap: 0.41.0
+2026-02-09 14:20:12,179:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:35: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _pt_shuffle_rec(i, indexes, index_mask, partition_tree, M, pos):
+
+2026-02-09 14:20:12,186:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:54: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def delta_minimization_order(all_masks, max_swap_size=100, num_passes=2):
+
+2026-02-09 14:20:12,188:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:63: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window(order, start, length):
+
+2026-02-09 14:20:12,188:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:69: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window_score_gain(masks, order, start, length):
+
+2026-02-09 14:20:12,189:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:77: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _mask_delta_score(m1, m2):
+
+2026-02-09 14:20:12,192:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:5: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def identity(x):
+
+2026-02-09 14:20:12,192:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:10: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _identity_inverse(x):
+
+2026-02-09 14:20:12,193:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:15: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def logit(x):
+
+2026-02-09 14:20:12,194:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:20: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _logit_inverse(x):
+
+2026-02-09 14:20:12,194:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:363: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_single_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-09 14:20:12,196:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:385: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_multi_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-09 14:20:12,196:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:428: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _init_masks(cluster_matrix, M, indices_row_pos, indptr):
+
+2026-02-09 14:20:12,197:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:439: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _rec_fill_masks(cluster_matrix, indices_row_pos, indptr, indices, M, ind):
+
+2026-02-09 14:20:12,204:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:186: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _single_delta_mask(dind, masked_inputs, last_mask, data, x, noop_code):
+
+2026-02-09 14:20:12,205:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:197: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _delta_masking(masks, x, curr_delta_inds, varying_rows_out,
+
+2026-02-09 14:20:12,208:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_image.py:175: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _jit_build_partition_tree(xmin, xmax, ymin, ymax, zmin, zmax, total_ywidth, total_zwidth, M, clustering, q):
+
+2026-02-09 14:20:12,218:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\explainers\_partition.py:676: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def lower_credit(i, value, M, values, clustering):
+
+2026-02-09 14:20:12,224:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-09 14:20:12,225:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-09 14:20:12,372:INFO:plot type: summary
+2026-02-09 14:20:12,372:INFO:Creating TreeExplainer
+2026-02-09 14:20:12,376:INFO:Compiling shap values
+2026-02-09 14:20:14,918:WARNING:No data for colormapping provided via 'c'. Parameters 'vmin', 'vmax' will be ignored
+
+2026-02-09 14:20:15,150:WARNING:FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+2026-02-09 14:20:15,151:INFO:Visual Rendered Successfully
+2026-02-09 14:20:15,151:INFO:interpret_model() successfully completed......................................
+2026-02-09 14:20:16,407:INFO:Initializing finalize_model()
+2026-02-09 14:20:16,407:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2026-02-09 14:20:16,408:INFO:Finalizing RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-09 14:20:16,419:INFO:Initializing create_model()
+2026-02-09 14:20:16,419:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000011F7AD80FA0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2026-02-09 14:20:16,419:INFO:Checking exceptions
+2026-02-09 14:20:16,421:INFO:Importing libraries
+2026-02-09 14:20:16,421:INFO:Copying training dataset
+2026-02-09 14:20:16,422:INFO:Defining folds
+2026-02-09 14:20:16,422:INFO:Declaring metric variables
+2026-02-09 14:20:16,423:INFO:Importing untrained model
+2026-02-09 14:20:16,423:INFO:Declaring custom model
+2026-02-09 14:20:16,423:INFO:Random Forest Classifier Imported successfully
+2026-02-09 14:20:16,425:INFO:Cross validation set to False
+2026-02-09 14:20:16,425:INFO:Fitting Model
+2026-02-09 14:20:17,633:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+2026-02-09 14:20:17,633:INFO:create_model() successfully completed......................................
+2026-02-09 14:20:17,771:INFO:_master_model_container: 3
+2026-02-09 14:20:17,772:INFO:_display_container: 2
+2026-02-09 14:20:17,780:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+2026-02-09 14:20:17,780:INFO:finalize_model() successfully completed......................................
+2026-02-09 14:20:17,924:INFO:Initializing save_model()
+2026-02-09 14:20:17,924:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False), model_name=final_yield_prediction_model, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated'))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=123,
+                                                                              sampling_strategy='auto'))))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2026-02-09 14:20:17,924:INFO:Adding model into prep_pipe
+2026-02-09 14:20:17,924:WARNING:Only Model saved as it was a pipeline.
+2026-02-09 14:20:17,963:INFO:final_yield_prediction_model.pkl saved in current working directory
+2026-02-09 14:20:17,973:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+2026-02-09 14:20:17,974:INFO:save_model() successfully completed......................................
+2026-02-09 14:21:12,486:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:21:12,487:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:21:12,487:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:21:12,487:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:21:16,113:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-09 14:21:19,211:INFO:Initializing load_model()
+2026-02-09 14:21:19,212:INFO:load_model(model_name=reports\final_yield_prediction_model, platform=None, authentication=None, verbose=True)
+2026-02-09 14:21:19,385:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-09 14:22:43,412:INFO:Initializing predict_model()
+2026-02-09 14:22:43,413:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002515EC5D070>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'feature_22',
+                                             'fea...
+                                             'feature_29', 'feature_30',
+                                             'feature_31', 'feature_32', ...],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=[],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=123)))),
+                ('actual_estimator',
+                 RandomForestClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002515CC3B4C0>)
+2026-02-09 14:22:43,413:INFO:Checking exceptions
+2026-02-09 14:22:43,413:INFO:Preloading libraries
+2026-02-09 14:22:43,414:INFO:Set up data.
+2026-02-09 14:22:43,934:INFO:Set up index.
+2026-02-09 14:42:42,180:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+2026-02-09 14:42:42,182:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,182:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,182:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+
+2026-02-09 14:42:42,183:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+2026-02-09 14:42:42,272:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+
+2026-02-09 14:42:42,503:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,503:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,504:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,504:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,505:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,505:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,507:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,507:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,507:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,508:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,509:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,509:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,509:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,510:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,510:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,511:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,512:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,512:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,512:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,513:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,513:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,514:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,514:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,515:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,515:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,516:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,517:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,517:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,518:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,518:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,519:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,519:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,520:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,520:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,520:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,521:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,522:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,523:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,523:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,524:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,524:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,524:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,525:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,525:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,525:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,526:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,527:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,528:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,528:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,529:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,529:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,530:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,530:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,531:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,531:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,532:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,532:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,532:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,533:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,533:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,534:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,535:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,535:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,536:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,536:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,536:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,537:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,537:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,539:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,539:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,541:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,541:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,541:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,542:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,543:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,543:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,544:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,544:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,545:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,545:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,547:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,548:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,548:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,549:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,549:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,550:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,550:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,550:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,551:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,551:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,551:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,552:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,552:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,553:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,553:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,554:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,555:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,556:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,556:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,557:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,557:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,557:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,558:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,559:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,559:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,560:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,560:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,561:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,561:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,562:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,562:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,562:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,564:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,564:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,564:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,565:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,565:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,566:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,568:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,568:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,569:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,569:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,571:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,571:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,572:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,572:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,573:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,573:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,574:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,574:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,575:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,575:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,576:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,576:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,577:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,577:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,578:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,578:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,579:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,580:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,580:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,581:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,581:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,582:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,583:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,585:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,587:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,591:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,593:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,594:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,595:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,595:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,596:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,597:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,598:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,599:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,599:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,600:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,600:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,601:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,601:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,602:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,602:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,603:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,603:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,604:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,605:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,605:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,606:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,606:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,606:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,607:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,607:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,608:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,608:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,609:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,609:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,610:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,610:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,611:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,611:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,611:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,613:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,613:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,614:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,614:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,616:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,617:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,618:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,618:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,620:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,621:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,622:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,623:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,623:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,624:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,624:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,624:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,625:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,626:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,626:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,626:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,627:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,628:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,628:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,629:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,629:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,631:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,632:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,633:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,633:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,633:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,634:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,634:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,635:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,635:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,635:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,636:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,636:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,636:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,636:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,636:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,638:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,638:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,639:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,639:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,639:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,640:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,640:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,640:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,641:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,641:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,641:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,642:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,642:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,643:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,643:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,643:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,644:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,644:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,644:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,645:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,645:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,645:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,646:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,646:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,646:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,646:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,647:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,647:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,649:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,649:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,650:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,650:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,651:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,651:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,651:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,652:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,652:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,652:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,653:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,653:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,653:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,654:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,654:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,654:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,655:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,655:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,656:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,656:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,656:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,657:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,657:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,657:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,658:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,658:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,658:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,658:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,658:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,659:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,659:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,660:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,660:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,660:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,661:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,661:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,661:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,662:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,662:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,662:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,663:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,663:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,664:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,664:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,664:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,665:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,665:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,666:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,666:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,666:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,666:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,668:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,668:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,669:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,669:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,670:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,671:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,672:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,672:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,673:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,674:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,674:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,675:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,675:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,676:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,676:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,677:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,677:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,678:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,678:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,679:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,680:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,681:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,682:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,682:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,683:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,683:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,684:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,684:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,685:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,685:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,685:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,686:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,687:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,687:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,688:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,689:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,690:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,691:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,691:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,692:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,692:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,692:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,693:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,694:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,695:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,695:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,696:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,697:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,698:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,698:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,699:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,700:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,700:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,701:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,702:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,702:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,703:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,703:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,704:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,705:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,705:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,706:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,706:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,706:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,706:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,707:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,708:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,708:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,708:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,710:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,711:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,712:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,713:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,713:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,714:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,715:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,715:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,716:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,716:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,716:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,717:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,718:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,719:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,719:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,720:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,720:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,721:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,722:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,722:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,722:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,724:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,724:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,725:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,726:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,726:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,727:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,727:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,728:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,728:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,729:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,730:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,730:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,731:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\utils\_dependencies.py:60: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ver = LooseVersion(dist.metadata["Version"])
+
+2026-02-09 14:42:42,731:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:42:42,732:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:42:42,732:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:42:42,732:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-09 14:42:42,870:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\yellowbrick\style\colors.py:35: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2026-02-09 14:42:42,870:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\setuptools\_distutils\version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2026-02-09 14:42:42,872:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\yellowbrick\style\rcmod.py:31: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  mpl_ge_150 = LooseVersion(mpl.__version__) >= "1.5.0"
+
+2026-02-09 14:42:42,872:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\setuptools\_distutils\version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+
+2026-02-09 14:42:43,276:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\scikitplot\plotters.py:33: DeprecationWarning: This module was deprecated in version 0.3.0 and its functions are spread throughout different modules. Please check the documentation and update your function calls as soon as possible. This module will be removed in 0.4.0
+  warnings.warn("This module was deprecated in version 0.3.0 and its functions "
+
+2026-02-09 14:42:43,612:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-09 14:42:44,664:INFO:Initializing load_model()
+2026-02-09 14:42:44,664:INFO:load_model(model_name=D:\AutoML_Semiconductor_Yield\reports\final_yield_prediction_model, platform=None, authentication=None, verbose=True)
+2026-02-09 14:42:44,710:INFO:Initializing predict_model()
+2026-02-09 14:42:44,710:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000027FFB77F280>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'feature_20',
+                                             'feature_21', 'feature_22',
+                                             'fea...
+                                             'feature_29', 'feature_30',
+                                             'feature_31', 'feature_32', ...],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=[],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE(random_state=123)))),
+                ('actual_estimator',
+                 RandomForestClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000027FB64D1310>)
+2026-02-09 14:42:44,710:INFO:Checking exceptions
+2026-02-09 14:42:44,710:INFO:Preloading libraries
+2026-02-09 14:42:44,710:INFO:Set up data.
+2026-02-09 14:42:44,867:INFO:Set up index.

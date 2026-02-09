@@ -1,73 +1,84 @@
-# 🏭 資料處理與模型訓練流程 (Data Pipeline)
+# 🏭 Data Pipeline & Model Training Workflow
 
-本文檔詳細說明半導體良率預測系統的資料流向、前處理邏輯與模型訓練策略。
+本文檔詳細說明半導體良率預測系統的資料處理流與模型訓練架構。
 
-## 📊 1. 系統架構圖 (Pipeline Overview)
+## 🛠️ 系統架構流程圖 (Mermaid)
 
 ```mermaid
 graph TD
-    A[原始資料 SECOM Dataset] -->|讀取| B(資料前處理 Data Preprocessing)
-    B --> C{特徵工程 Feature Engineering}
-    C -->|清洗後資料| D[儲存: secom_processed.csv]
-    D --> E[PyCaret AutoML 環境]
+    %% 定義樣式
+    classDef data fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef script fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef artifact fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+
+    %% 節點定義
+    RawData[("📂 Raw Data<br/>(secom.data / labels)")]:::data
+    ScriptPre[("🐍 scripts/01_data_preprocessing.py<br/>(資料清洗腳本)")]:::script
     
-    subgraph "AutoML 訓練階段"
-        E --> F[類別平衡 SMOTE]
-        F --> G[模型比較與選擇]
-        G --> H[Random Forest 模型]
-        H --> I[模型最佳化 Tuned Model]
+    ProcessedData[("📄 secom_processed.csv<br/>(已清洗資料)")]:::data
+    
+    ScriptTrain[("🐍 train_upgrade.py<br/>(模型訓練與升級腳本)")]:::script
+    
+    subgraph AutoML[PyCaret AutoML Engine]
+        Setup[環境設定<br/>(Fix Imbalance / Normalize)]
+        Compare[模型競賽<br/>(RF vs XGBoost vs LightGBM)]
+        Tune[最佳模型優化]
     end
     
-    I --> J[最終模型 Final Model]
-    J --> K[部署: Streamlit App]
+    Model[("🤖 final_yield_prediction_model.pkl<br/>(最終模型)")]:::artifact
+    Reports[("📊 Evaluation Reports<br/>(SHAP, AUC, Confusion Matrix)")]:::artifact
     
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style J fill:#bbf,stroke:#333,stroke-width:2px
-    style K fill:#bfb,stroke:#333,stroke-width:2px
+    App[("🚀 Streamlit App<br/>(app.py)")]:::script
+
+    %% 流程連線
+    RawData --> ScriptPre
+    ScriptPre -->|去除常量, 填補缺失值| ProcessedData
+    
+    ProcessedData --> ScriptTrain
+    ScriptTrain --> Setup
+    Setup --> Compare
+    Compare -->|選出 AUC 最高者| Tune
+    
+    Tune --> Model
+    Tune --> Reports
+    
+    Model --> App
+    Reports --> App
 
     ---
 
-### 第 2 部分：資料前處理細節
+### 第二部分：資料處理細節
+
+這部分說明了前面的清洗邏輯。
 
 ```markdown
-## 🛠️ 2. 資料前處理細節 (Preprocessing Steps)
+## 📊 資料處理細節 (Data Preprocessing)
 
-原始資料包含 1567 筆樣本與 591 個感測器特徵，且存在大量缺失值與標記不平衡問題。
+### 1. 資料清洗 (`scripts/01_data_preprocessing.py`)
+原始 SECOM 數據集包含大量缺失值 (NaN) 與冗餘特徵，我們執行以下處理：
+* **缺失值處理**：使用 KNN Imputer 或 Mean/Median 填補。
+* **特徵篩選**：
+    * 移除單一值 (Constant) 欄位。
+    * 移除高相關性 (High Correlation) 特徵以避免共線性。
+* **格式統一**：合併 Feature 與 Label，輸出為標準 CSV 格式。
 
-### 步驟 A: 資料清洗 (Cleaning)
-- **去除無效特徵**：刪除缺失值超過 55% 的欄位 (Drop features with >55% missing values)。
-- **單一值移除**：刪除只有單一數值的欄位 (Drop columns with only 1 unique value)，因其不具預測力。
-- **缺失值填補**：使用平均值 (Mean imputation) 填補剩餘缺失數據。
 
-### 步驟 B: 特徵篩選 (Feature Selection)
-- 利用 `Variance Threshold` 移除低變異特徵。
-- 透過相關性矩陣 (Correlation Matrix) 移除高度共線性特徵。
+---
 
-## ⚙️ 3. 模型訓練策略 (Training Strategy)
+### 第三部分：模型訓練與輸出產物
 
-### 類別不平衡處理 (Imbalance Handling)
-由於良品 (Pass) 遠多於不良品 (Fail)，比例約為 14:1。直接訓練會導致模型傾向預測全為良品。
-- **解決方案**：在 PyCaret setup 中啟用 `fix_imbalance=True`。
-- **演算法**：使用 **SMOTE (Synthetic Minority Over-sampling Technique)** 合成少數類樣本，使訓練集達到平衡。
+這部分說明了 AutoML 機制和最終產出的檔案。
 
-### 模型選擇 (Model Selection)
-- **演算法**：Random Forest Classifier (隨機森林)。
-- **選擇原因**：
-    1. 對雜訊與離群值具有良好的魯棒性 (Robustness)。
-    2. 內建特徵重要性評估 (Feature Importance)。
-    3. 不容易過度擬合 (Overfitting)。
+### 2. 模型訓練與評估 (`train_upgrade.py`)
+使用 **PyCaret** 框架進行自動化機器學習：
+* **不平衡處理 (Fix Imbalance)**：由於良率資料通常 Pass 遠多於 Fail，我們使用 SMOTE 或類似技術平衡樣本。
+* **多模型比較**：同時訓練 Random Forest, XGBoost, LightGBM，依據 **AUC** 指標自動選擇最佳模型。
+* **可解釋性 AI (XAI)**：
+    * 整合 **SHAP (SHapley Additive exPlanations)** 計算特徵貢獻度。
+    * 生成 Confusion Matrix 確認召回率 (Recall)。
 
-    
-## 📈 4. 評估指標 (Evaluation Metrics)
-
-本專案不僅關注 Accuracy，更重視對不良品 (Fail, Label=1) 的捕捉能力：
-
-1.  **Recall (召回率)**：最關鍵指標。我們寧可誤判良品為壞品 (False Alarm)，也不能放過真正的壞品 (Miss)。
-2.  **AUC (Area Under Curve)**：評估模型整體的鑑別力。
-3.  **Confusion Matrix**：觀察 TP (真正壞品) 與 FN (漏網之魚) 的具體數量。
-
-## 🔄 5. 自動化報告 (Automated Reporting)
-訓練腳本 (`train_upgrade.py`) 會自動生成以下圖表至 `reports/` 目錄：
-- `Confusion Matrix.png`: 混淆矩陣
-- `Feature Importance.png`: 關鍵影響因子
-- `SHAP Summary.png`: 模型可解釋性分析 (Explainable AI)
+## 📁 輸出產物
+執行訓練後，系統會生成以下關鍵檔案供 App 使用：
+1.  `final_yield_prediction_model.pkl`: 封裝好的預測管線。
+2.  `reports/SHAP Summary.png`: 全局特徵影響力分析圖。
+3.  `reports/model_comparison.csv`: 各模型效能評比表。

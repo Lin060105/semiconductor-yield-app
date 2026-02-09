@@ -3,8 +3,10 @@ pandas
 numpy<1.24
 shap==0.41.0
 matplotlib<3.8
-pycaret
+pycaret[full]
 scikit-learn<1.3.0
 joblib==1.2.0
 scipy
 pytest
+xgboost
+lightgbm
