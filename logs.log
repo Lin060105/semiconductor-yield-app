@@ -12492,3 +12492,114 @@ Implementing implicit namespace packages (as specified in PEP 420) is preferred 
 2026-02-11 15:16:36,362:INFO:Preloading libraries
 2026-02-11 15:16:36,362:INFO:Set up data.
 2026-02-11 15:16:36,403:INFO:Set up index.
+2026-02-11 15:48:12,606:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:48:12,607:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:48:12,607:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:48:12,607:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:48:13,101:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2026-02-11 15:48:13,561:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-11 15:48:14,813:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:35: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _pt_shuffle_rec(i, indexes, index_mask, partition_tree, M, pos):
+
+2026-02-11 15:48:14,827:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:54: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def delta_minimization_order(all_masks, max_swap_size=100, num_passes=2):
+
+2026-02-11 15:48:14,828:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:63: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window(order, start, length):
+
+2026-02-11 15:48:14,829:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:69: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window_score_gain(masks, order, start, length):
+
+2026-02-11 15:48:14,831:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:77: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _mask_delta_score(m1, m2):
+
+2026-02-11 15:48:14,836:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:5: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def identity(x):
+
+2026-02-11 15:48:14,837:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:10: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _identity_inverse(x):
+
+2026-02-11 15:48:14,838:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:15: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def logit(x):
+
+2026-02-11 15:48:14,841:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:20: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _logit_inverse(x):
+
+2026-02-11 15:48:14,858:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:363: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_single_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-11 15:48:14,860:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:385: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_multi_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-11 15:48:14,861:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:428: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _init_masks(cluster_matrix, M, indices_row_pos, indptr):
+
+2026-02-11 15:48:14,862:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:439: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _rec_fill_masks(cluster_matrix, indices_row_pos, indptr, indices, M, ind):
+
+2026-02-11 15:48:14,888:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:186: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _single_delta_mask(dind, masked_inputs, last_mask, data, x, noop_code):
+
+2026-02-11 15:48:14,890:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:197: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _delta_masking(masks, x, curr_delta_inds, varying_rows_out,
+
+2026-02-11 15:48:14,907:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_image.py:175: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _jit_build_partition_tree(xmin, xmax, ymin, ymax, zmin, zmax, total_ywidth, total_zwidth, M, clustering, q):
+
+2026-02-11 15:48:14,940:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\explainers\_partition.py:676: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def lower_credit(i, value, M, values, clustering):
+
+2026-02-11 15:48:14,980:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-11 15:48:14,981:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-11 15:48:16,275:INFO:Initializing load_model()
+2026-02-11 15:48:16,275:INFO:load_model(model_name=output/final_yield_prediction_model, platform=None, authentication=None, verbose=True)
+2026-02-11 15:48:16,307:WARNING:Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+
+2026-02-11 15:49:29,040:INFO:Initializing predict_model()
+2026-02-11 15:49:29,040:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B1A06B6BB0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'feature_19', 'fea...
+                                             'feature_31', 'feature_32', ...],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=[],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('trained_model',
+                 RandomForestClassifier(n_jobs=-1, random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, replace_labels_in_column=<function _SupervisedExperiment.predict_model.<locals>.replace_labels_in_column at 0x000001B1A1781CA0>)
+2026-02-11 15:49:29,040:INFO:Checking exceptions
+2026-02-11 15:49:29,040:INFO:Preloading libraries
+2026-02-11 15:49:29,041:INFO:Set up data.
+2026-02-11 15:49:29,220:INFO:Set up index.
+2026-02-11 15:52:16,128:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:52:16,128:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:52:16,128:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:52:16,128:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:52:16,601:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2026-02-11 15:52:16,976:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+

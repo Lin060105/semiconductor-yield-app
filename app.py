@@ -1,211 +1,209 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import os
-import shutil
 from pycaret.classification import load_model, predict_model
-from PIL import Image
+import shap
+import matplotlib.pyplot as plt
+import os
 
-# --- 1. 頁面設定 ---
+# --- 設定頁面資訊 ---
 st.set_page_config(
-    page_title="Semiconductor Yield Prediction Pro",
-    page_icon="🏭",
+    page_title="Semiconductor Yield Prediction",
+    page_icon="🧊",
     layout="wide"
 )
 
-st.title("🏭 半導體良率預測系統 (v3.0 Ultimate)")
+# --- 標題與簡介 ---
+st.title("🧊 AI Semiconductor Yield Prediction System")
 st.markdown("""
-本系統利用 **CatBoost / Random Forest** 整合模型預測晶片良率。
-新功能：**Fail Ranking** (優先處理高風險晶片) 與 **完整模型評估報告**。
+**Status**: v1.0.0 (Production Ready) | **Model**: CatBoost/XGBoost Ensemble
+This application predicts wafer yield outcomes and analyzes failure root causes using SHAP.
 """)
 
-# --- 2. 載入模型與資源 ---
+# --- 側邊欄：模型與設定 ---
+st.sidebar.header("🔧 Configuration")
+model_path = 'output/final_yield_prediction_model'
+
 @st.cache_resource
-def load_prediction_model():
-    # 嘗試多個路徑載入模型
-    paths = [
-        'output/final_yield_prediction_model', 
-        'final_yield_prediction_model',
-        'reports/final_yield_prediction_model'
-    ]
-    
-    for path in paths:
-        # PyCaret load_model 不需要 .pkl 副檔名
-        if os.path.exists(path + '.pkl'):
-            try:
-                return load_model(path)
-            except:
-                continue
-    return None
-
-model = load_prediction_model()
-if not model:
-    st.error("❌ 找不到模型檔案，請確認 `output/final_yield_prediction_model.pkl` 存在。")
-
-# 載入特徵清單 (確保輸入順序正確)
-required_features = [f'Sensor_{i}' for i in range(1, 11)] # 預設 fallback
-try:
-    if os.path.exists('required_features.pkl'):
-        import pickle
-        with open('required_features.pkl', 'rb') as f:
-            required_features = pickle.load(f)
-except Exception as e:
-    pass # 使用預設值
-
-# --- 3. 建立分頁 ---
-tab1, tab2, tab3 = st.tabs(["🔍 預測與高風險清單", "📊 模型解釋 (SHAP)", "🏆 模型效能報告"])
-
-# === Tab 1: 預測功能 (含 Fail Ranking) ===
-with tab1:
-    col1, col2 = st.columns([1, 2])
-    
-    with col1:
-        st.subheader("單點模擬")
-        input_data = {}
-        # 為了演示，只顯示前 5 個特徵
-        display_features = required_features[:5]
-        for feature in display_features:
-            val = st.number_input(f"{feature}", value=0.0)
-            input_data[feature] = val
-            
-        predict_btn = st.button("🚀 執行模擬預測", type="primary")
-
-        if predict_btn and model:
-            # 補齊其他特徵為 0
-            for feature in required_features[5:]:
-                input_data[feature] = 0.0
-                
-            df_input = pd.DataFrame([input_data])
-            prediction = predict_model(model, data=df_input)
-            
-            # 處理 PyCaret 3.x 輸出
-            try:
-                label = prediction['prediction_label'].iloc[0]
-                score = prediction['prediction_score'].iloc[0]
-                
-                if label == 1:
-                    st.error(f"⚠️ 預測結果: **Fail (異常)**")
-                    st.metric("異常機率", f"{score:.2%}")
-                else:
-                    st.success(f"✅ 預測結果: **Pass (正常)**")
-                    st.metric("安全信心", f"{score:.2%}")
-            except Exception as e:
-                st.error(f"解析錯誤: {e}")
-
-    with col2:
-        st.subheader("📂 批次預測 & Fail Ranking")
-        st.info("上傳 CSV 檔案，系統將自動篩選出 **高風險 (High Probability of Fail)** 的晶片。")
-        
-        uploaded_file = st.file_uploader("上傳測試數據 (CSV)", type="csv")
-        if uploaded_file and model:
-            try:
-                batch_df = pd.read_csv(uploaded_file)
-                predictions = predict_model(model, data=batch_df)
-                
-                # 確保欄位名稱一致
-                lbl_col = 'prediction_label'
-                score_col = 'prediction_score'
-                
-                if lbl_col in predictions.columns:
-                    # --- 關鍵功能：Fail Ranking ---
-                    st.markdown("### 🔥 高風險晶片排行榜 (Top Failures)")
-                    
-                    # 篩選預測為 Fail (1) 的資料
-                    fail_df = predictions[predictions[lbl_col] == 1].copy()
-                    
-                    if not fail_df.empty:
-                        # 依照分數排序 (分數越高代表越像 Fail)
-                        fail_df = fail_df.sort_values(by=score_col, ascending=False)
-                        
-                        # 顯示前 10 名
-                        st.dataframe(
-                            fail_df.head(10).style.background_gradient(subset=[score_col], cmap='Reds'),
-                            use_container_width=True
-                        )
-                        st.warning(f"⚠️ 共發現 {len(fail_df)} 個潛在異常晶片！建議優先檢查上表中的項目。")
-                    else:
-                        st.success("🎉 太棒了！本批次數據中沒有發現預測為 Fail 的晶片。")
-                    
-                    # 下載完整結果
-                    csv = predictions.to_csv(index=False).encode('utf-8')
-                    st.download_button("📥 下載完整預測報告", csv, "predictions_with_ranking.csv", "text/csv")
-                else:
-                    st.error("預測結果欄位不如預期，無法生成排行榜。")
-            except Exception as e:
-                st.error(f"批次處理失敗: {e}")
-
-# === Tab 2: 模型解釋 (SHAP) ===
-with tab2:
-    st.header("🧠 SHAP 模型解釋")
-    # 支援多個可能的圖片路徑
-    shap_paths = [
-        'output/automl_reports/shap_summary_plot.png', # Step 1 可能產生的路徑
-        'reports/SHAP Summary.png', 
-        'output/shap_plots/shap_summary_plot.png'
-    ]
-    
-    img_found = False
-    for p in shap_paths:
-        if os.path.exists(p):
-            st.image(p, caption="Feature Importance (SHAP)", use_column_width=True)
-            img_found = True
-            break
-            
-    if not img_found:
-        st.warning("⚠️ 尚未生成 SHAP 圖表。請執行 `scripts/05_explain_model.py` 或確認路徑。")
-
-# === Tab 3: 模型效能報告 (整合 Step 1 結果) ===
-with tab3:
-    st.header("🏆 模型效能儀表板")
-    
-    # 1. 比較表格
-    # Step 1 生成的是 'model_comparison_benchmark.csv'
-    csv_path = 'reports/model_comparison_benchmark.csv'
-    if os.path.exists(csv_path):
-        st.subheader("模型基準測試 (Benchmark)")
-        df_metrics = pd.read_csv(csv_path)
-        # 簡單清理表格
-        if 'Unnamed: 0' in df_metrics.columns:
-            df_metrics = df_metrics.drop(columns=['Unnamed: 0'])
-        st.dataframe(df_metrics.style.highlight_max(axis=0, color='lightgreen'))
+def load_yield_model():
+    if os.path.exists(model_path + '.pkl'):
+        return load_model(model_path)
     else:
-        st.info("ℹ️ 尚未找到模型比較表 (model_comparison_benchmark.csv)。")
+        st.error(f"Model file not found at {model_path}.pkl. Please run training scripts first.")
+        return None
 
-    # 2. 圖表展示
-    st.subheader("📊 視覺化評估")
+pipeline = load_yield_model()
+
+if pipeline:
+    st.sidebar.success("Model Loaded Successfully")
+    try:
+        model = pipeline._final_estimator
+    except:
+        model = pipeline
+
+# --- 主功能分頁 (新增 Tab 5: Model Performance) ---
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "📂 Batch Prediction", 
+    "📊 Batch Statistics", 
+    "⚠️ Fail Ranking", 
+    "🔍 SHAP Analysis",
+    "📉 Model Performance" 
+])
+
+# 初始化 session_state
+if 'predictions' not in st.session_state:
+    st.session_state['predictions'] = None
+if 'data' not in st.session_state:
+    st.session_state['data'] = None
+
+# ==========================================
+# Tab 1: Batch Prediction
+# ==========================================
+with tab1:
+    st.subheader("Upload Wafer Data for Prediction")
+    use_sample = st.checkbox("Use sample data (secom_processed.csv)")
+    uploaded_file = st.file_uploader("Or upload your CSV file", type=['csv'])
     
-    # 定義圖表路徑 (根據 Step 1 的輸出設定)
-    # Step 1 存到 output/automl_reports/
-    img_dir = 'output/automl_reports' 
-    
-    col_a, col_b = st.columns(2)
-    
-    with col_a:
-        st.markdown("**學習曲線 (Learning Curve) - 過擬合檢查**")
-        p = os.path.join(img_dir, 'learning_curve.png')
-        if os.path.exists(p):
-            st.image(p, use_column_width=True)
+    df = None
+    if use_sample:
+        if os.path.exists('data/secom_processed.csv'):
+            df = pd.read_csv('data/secom_processed.csv').head(100)
+            st.info("Loaded sample data (first 100 rows).")
+    elif uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        st.info("File uploaded successfully.")
+
+    if df is not None:
+        st.session_state['data'] = df
+        if st.button("🚀 Run Prediction", type="primary"):
+            with st.spinner("Analyzing wafers..."):
+                predictions = predict_model(pipeline, data=df)
+                st.session_state['predictions'] = predictions
+                st.success("Prediction complete! Check other tabs for insights.")
+        
+        with st.expander("Preview Raw Data"):
+            st.dataframe(df.head())
+
+# ==========================================
+# Tab 2: Batch Statistics
+# ==========================================
+with tab2:
+    st.subheader("Batch Yield Overview")
+    if st.session_state['predictions'] is not None:
+        preds = st.session_state['predictions']
+        total = len(preds)
+        fail_count = preds[preds['prediction_label'] == 1].shape[0]
+        pass_count = total - fail_count
+        yield_rate = (pass_count / total) * 100
+        
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Total Wafers", f"{total}")
+        col2.metric("Yield Rate", f"{yield_rate:.2f}%", delta_color="normal")
+        col3.metric("Defect Count", f"{fail_count}", delta_color="inverse")
+        
+        fig, ax = plt.subplots()
+        ax.pie([pass_count, fail_count], labels=['Pass', 'Fail'], autopct='%1.1f%%', colors=['#66b3ff','#ff9999'])
+        st.pyplot(fig)
+    else:
+        st.warning("Please run prediction in 'Batch Prediction' tab first.")
+
+# ==========================================
+# Tab 3: Fail Ranking
+# ==========================================
+with tab3:
+    st.subheader("Top High-Risk Wafers")
+    if st.session_state['predictions'] is not None:
+        preds = st.session_state['predictions']
+        fails = preds[preds['prediction_label'] == 1].copy()
+        
+        if not fails.empty:
+            top_fails = fails.sort_values(by='prediction_score', ascending=False).head(20)
+            st.dataframe(top_fails.style.background_gradient(subset=['prediction_score'], cmap='Reds'))
         else:
-            st.info("(尚無學習曲線圖)")
+            st.success("No failures predicted in this batch!")
+            st.markdown("---")
+            st.markdown("**Lowest Confidence 'Pass' Wafers (Potential False Negatives):**")
+            risky_pass = preds[preds['prediction_label'] == 0].sort_values(by='prediction_score', ascending=True).head(10)
+            st.dataframe(risky_pass)
+    else:
+        st.warning("Please run prediction first.")
+
+# ==========================================
+# Tab 4: SHAP Analysis
+# ==========================================
+with tab4:
+    st.subheader("Model Interpretability (SHAP)")
+    if st.session_state['data'] is not None:
+        analysis_type = st.radio("Select Analysis Type", ["Global Summary (Feature Importance)", "Local Waterfall (Single Wafer)"])
+        shap_data = st.session_state['data'].head(500)
+        
+        try:
+            transformer = pipeline[:-1]
+            X_transformed = transformer.transform(shap_data)
+            explainer = shap.TreeExplainer(model)
+            shap_values = explainer.shap_values(X_transformed)
             
-        st.markdown("**混淆矩陣 (Confusion Matrix)**")
-        p = os.path.join(img_dir, 'confusion_matrix.png')
-        if os.path.exists(p):
-            st.image(p, use_column_width=True)
-        else:
-            st.info("(尚無混淆矩陣圖)")
+            if analysis_type == "Global Summary (Feature Importance)":
+                fig_shap, ax_shap = plt.subplots()
+                shap.summary_plot(shap_values, X_transformed, show=False)
+                st.pyplot(fig_shap)
+            elif analysis_type == "Local Waterfall (Single Wafer)":
+                sample_idx = st.selectbox("Select Wafer Index", shap_data.index)
+                loc_idx = shap_data.index.get_loc(sample_idx)
+                
+                explanation = shap.Explanation(
+                    values=shap_values, 
+                    base_values=explainer.expected_value, 
+                    data=X_transformed, 
+                    feature_names=X_transformed.columns if hasattr(X_transformed, 'columns') else None
+                )
+                
+                st.markdown(f"**Why Wafer {sample_idx} is predicted this way:**")
+                fig_water, ax_water = plt.subplots()
+                shap.plots.waterfall(explanation[loc_idx], show=False)
+                st.pyplot(fig_water)
+        except Exception as e:
+            st.error(f"Could not generate SHAP plot: {e}")
+    else:
+        st.warning("Please load data first.")
 
-    with col_b:
-        st.markdown("**AUC 曲線 (ROC Curve)**")
-        p = os.path.join(img_dir, 'auc_roc_curve.png')
-        if os.path.exists(p):
-            st.image(p, use_column_width=True)
-        else:
-            st.info("(尚無 AUC 圖)")
+# ==========================================
+# Tab 5: Model Performance (模型證明)
+# ==========================================
+with tab5:
+    st.subheader("📊 Model Validation & Performance Proof")
+    st.markdown("Detailed metrics demonstrating model reliability and robustness.")
+    
+    # 定義圖片路徑
+    report_imgs = {
+        "Confusion Matrix": "output/automl_reports/confusion_matrix.png",
+        "AUC-ROC Curve": "output/automl_reports/auc_roc_curve.png",
+        "Feature Importance": "output/automl_reports/feature_importance.png",
+        "Learning Curve (Overfitting Check)": "output/automl_reports/learning_curve.png",
+        "Model Comparison (XGB vs CatBoost)": "reports/model_comparison_final.png"
+    }
 
-        st.markdown("**特徵重要性 (Feature Importance)**")
-        p = os.path.join(img_dir, 'feature_importance.png')
-        if os.path.exists(p):
-            st.image(p, use_column_width=True)
+    # 使用 2 欄佈局顯示圖片
+    col1, col2 = st.columns(2)
+    
+    # 遍歷並顯示圖片
+    for i, (title, path) in enumerate(report_imgs.items()):
+        # 檢查檔案是否存在
+        if os.path.exists(path):
+            # 輪流放在左欄或右欄
+            with (col1 if i % 2 == 0 else col2):
+                st.image(path, caption=title, use_container_width=True)
         else:
-            st.info("(尚無特徵重要性圖)")
+            with (col1 if i % 2 == 0 else col2):
+                st.warning(f"Image not found: {title} ({path})")
+    
+    # 顯示文字版的過擬合分析
+    st.markdown("---")
+    st.subheader("📝 Overfitting Analysis Report")
+    analysis_path = "reports/overfitting_analysis.txt"
+    if os.path.exists(analysis_path):
+        with open(analysis_path, "r") as f:
+            report_text = f.read()
+        st.text_area("Analysis Result", report_text, height=150)
+    else:
+        st.info("Analysis text report not found.")
