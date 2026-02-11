@@ -14,7 +14,7 @@
 
 ## 🚀 Live Demo (線上展示)
 
-👉 **[Click Here to Launch App (點擊開啟 AI 診斷系統)](https://semiconductor-yield-app-tmyu9jwd7kii2zndseugtq.streamlit.app)**
+👉 **[Click Here to Launch App (點擊開啟 AI 診斷系統)](https://semiconductor-yield-app-mw4jsvcuklcgwpcnqmy7gq.streamlit.app/)**
 
 ---
 
