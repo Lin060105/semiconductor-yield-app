@@ -2,48 +2,41 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main", "master" ]
+
+permissions:
+  contents: read
 
 jobs:
-  # 🌟 滿分關鍵 1：加入 Lint 檢查，確保程式碼排版與語法乾淨
-  lint:
+  build-and-test:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9
-    - name: Install flake8
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8
-    - name: Lint with flake8
-      run: |
-        # 捕捉嚴重的語法錯誤與未定義變數
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # 允許一些排版上的小瑕疵不中斷 CI，但列出警告 (長度放寬至127)
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-  # 執行單元測試
-  test:
-    needs: lint  # 必須先通過 lint 才會跑測試
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
     - name: Set up Python 3.9
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.9
+        python-version: "3.9"
+        cache: 'pip' # 啟用快取，加速後續執行
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # 優先安裝我們鎖定的穩定版本
-        pip install scikit-learn==1.3.0 pycaret==3.0.0
-        pip install -r requirements.txt
-        pip install pytest
-    - name: Run tests with pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
+    - name: Lint with flake8
       run: |
-        pytest tests/
+        # 停止建置如果出現語法錯誤 (E9, F63, F7, F82)
+        # 警告其他風格問題但不停止 (exit-zero)
+        # 忽略 E501 (行太長) 和 F401 (import未被使用 - PyCaret 常見狀況)
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --ignore=E501,W503,F401
+
+    - name: Test with pytest
+      run: |
+        # 執行測試並顯示詳細資訊
+        pytest tests/ -v
