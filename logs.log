@@ -7935,3 +7935,5 @@ THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
 2026-02-11 14:17:18,747:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   from pkg_resources import resource_filename
 
+2026-02-11 14:17:19,803:INFO:Initializing load_model()
+2026-02-11 14:17:19,804:INFO:load_model(model_name=final_yield_prediction_model, platform=None, authentication=None, verbose=True)
