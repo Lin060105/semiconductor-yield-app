@@ -1,10 +1,11 @@
 # 🏭 Semiconductor Yield Prediction System | 半導體良率智慧診斷系統
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](請把這裡改成您的Streamlit網址)
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://semiconductor-yield-app-tmyu9jwd7kii2zndseugtq.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/)
 [![PyCaret](https://img.shields.io/badge/ML-PyCaret-yellow.svg)](https://pycaret.org/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-blue.svg)](https://www.docker.com/)
 
-> **這是一個基於 AI 的半導體產線輔助系統，能夠透過感測器數據預測晶圓是否異常，並提供可解釋性分析 (SHAP) 與動態決策門檻調整功能。**
+> **這是一個基於 AI (CatBoost) 的半導體產線輔助系統，能夠透過感測器數據預測晶圓是否異常，並提供可解釋性分析 (SHAP) 與動態決策門檻調整功能。**
 
 ---
 
@@ -22,7 +23,7 @@
 
 ### 1. 🔍 單筆深度診斷 (Single Prediction)
 - 針對單一晶圓數據進行即時分析。
-- **可解釋性 AI (XAI)**：整合 **SHAP Waterfall Plot**，視覺化呈現導致異常的關鍵特徵（例如：`feature_492` 數值過高），讓工程師知道「為什麼壞掉」。
+- **可解釋性 AI (XAI)**：整合 **SHAP Summary Plot**，視覺化呈現導致異常的關鍵特徵（例如：`Sensor_59` 數值過高），讓工程師知道「為什麼壞掉」。
 
 ### 2. 🚀 批量快速篩選 (Batch Processing)
 - 支援上傳 CSV 檔案進行整批晶圓快篩。
@@ -33,35 +34,37 @@
 - **Trade-off**：想要「寧可錯殺，不可放過」或是「減少誤判」？由使用者決定。
 
 ---
+
 ## 📊 模型效能評估 (Model Evaluation)
 
-本專案採用 **隨機森林 (Random Forest)** 模型，並針對半導體製程常見的類別不平衡 (Class Imbalance) 進行權重優化。我們首要目標是極大化 **Recall (召回率)**，以確保能有效攔截異常晶圓，降低漏測風險。
+本專案經過多模型競賽 (Random Forest, XGBoost, LightGBM, CatBoost)，最終選用表現最佳的 **CatBoost Classifier**，並針對半導體製程常見的類別不平衡 (Class Imbalance) 使用 **SMOTE** 進行處理。
+
+我們首要目標是極大化 **Recall (召回率)**，以確保能有效攔截異常晶圓，降低漏測風險。
 
 ### 關鍵指標表現 (Key Metrics)
 
-| 指標 (Metric) | 數值 (Score) | 說明 (Description) |
-| :--- | :--- | :--- |
-| **Accuracy** | `92.5%` | 模型整體預測準確率 |
-| **Recall** | `88.0%` | 針對 Fail 類別的檢出能力（重點優化） |
-| **F1 Score** | `84.2%` | 精確率與召回率的平衡指標 |
+| 指標 (Metric) | 說明 (Description) |
+| :--- | :--- |
+| **Recall (召回率)** | **核心指標**：針對 Fail 類別的檢出能力（重點優化） |
+| **F1 Score** | 精確率與召回率的平衡指標 |
+| **AUC** | 模型區分良品與不良品的整體能力 |
 
 ### 效能亮點
 - **瑕疵攔截優化**：針對 Fail 類別加權，即使在良品佔多數的情況下，仍能準確抓出瑕疵品。
 - **關鍵特徵識別**：模型能自動提取對良率影響顯著的感測器數據 (Sensor Data)，輔助製程人員進行根因分析。
 
 > 📘 **延伸閱讀**
-> * 詳細訓練報告 (含 Confusion Matrix, ROC-AUC)：[View Full Training Report](reports/training_report.md)
 > * 數據處理與管線說明：[Data Pipeline Docs](docs/data_pipeline.md)
----
 
+---
 
 ## 🛠️ 技術棧 (Tech Stack)
 
-- **核心語言**：Python 3.10
-- **機器學習**：AutoML (PyCaret), Random Forest, Scikit-learn
-- **資料處理**：Pandas, NumPy
+- **核心語言**：Python 3.9
+- **機器學習**：AutoML (PyCaret), **CatBoost**, Scikit-learn
+- **資料處理**：Pandas, NumPy, SMOTE
 - **視覺化與介面**：Streamlit, Matplotlib, SHAP
-- **雲端部署**：Streamlit Cloud
+- **DevOps & 部署**：Docker, GitHub Actions, Streamlit Cloud
 
 ---
 
@@ -77,62 +80,81 @@
 | **實際 Fail (1)** | ❌ **False Negative (漏檢)**<br>客戶退貨、賠償、信譽受損<br>(Cost: **Very High**) | ✅ **True Positive**<br>成功攔截瑕疵品<br>(Cost: Saved!) |
 
 ### 為什麼需要調整閾值 (Threshold)？
+
 - **預設 (0.5)**：平衡準確率與召回率。
-- **調低 (e.g., 0.3)**：**嚴格模式**。
+- **調低 (e.g., 0.3)**：**嚴格模式**
   - 目的：寧可錯殺，不可放過。
   - 適用情境：車用電子、航太晶片等高可靠度要求產品。
   - 結果：Recall 上升（抓出更多瑕疵），但 False Positive 也會增加（誤殺良品）。
-- **調高 (e.g., 0.7)**：**寬鬆模式**。
+- **調高 (e.g., 0.7)**：**寬鬆模式**
   - 目的：降低報廢率，節省成本。
   - 適用情境：消費性電子（如低階玩具晶片）。
- 
-## 💻 如何在本地端執行 (Installation)
+
+---
+
+## 💻 如何在本地端執行 (Local Installation)
 
 如果您想在自己的電腦上運行此專案：
 
-1. **Clone 專案**
-   
-   git clone [https://github.com/Lin060105/semiconductor-yield-app.git](https://github.com/Lin060105/semiconductor-yield-app.git)
-   
-   ```bash
-   cd semiconductor-yield-app
+**1. Clone 專案**
+```bash
+git clone https://github.com/Lin060105/semiconductor-yield-app.git
+cd semiconductor-yield-app
+```
 
-2. **安裝依賴套件**
+**2. 安裝依賴套件**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **啟動系統**
+**3. 啟動系統**
 ```bash
 streamlit run app.py
 ```
 
-## 🐳 Docker 快速部署
+---
 
-無需安裝 Python 環境，直接使用 Docker 啟動系統：
+## 🐳 Docker Deployment (容器化部署)
 
-### 1. 建置映像檔 (Build)
+本專案支援 Docker 部署，確保在任何環境下皆可穩定執行。
+
+**1. Build Docker Image (建立映像檔)**
 ```bash
-docker build -t semiconductor-yield-app .
+docker build -t yield-prediction-app .
+```
 
-```markdown
-### 2. 啟動容器 (Run)
+**2. Run Container (啟動容器)**
 ```bash
-# 啟動後請訪問 http://localhost:8501
-docker run -p 8501:8501 semiconductor-yield-app
+docker run -d -p 8501:8501 --name yield-app yield-prediction-app
+```
 
-```markdown
-### 3. (開發者) 在容器內執行測試
+啟動後，請瀏覽：`http://localhost:8501`
+
+---
+
+## 🧪 Testing (測試)
+
+本專案包含自動化測試，用於驗證資料管線與模型載入邏輯。
+
+**執行測試指令**
 ```bash
-# 使用 --entrypoint 確保能覆蓋預設啟動指令
-# -v $(pwd):/app 讓你可以測試本機修改的程式碼，無需重新 Build
-# (Windows PowerShell 使用者請將 $(pwd) 改為 ${PWD})
-docker run --rm -v $(pwd):/app --entrypoint pytest semiconductor-yield-app
+pytest tests/
+```
+
+**預期輸出：**
+```
+==== 4 passed in 0.xxs ====
+```
+
+---
 
 ## 📝 開發紀錄
 
-- **Level 1**: 數據清洗與 UCI 資料集特徵工程。
-- **Level 2**: 使用 PyCaret 比較 10+ 種演算法，選定 Random Forest。
-- **Level 3**: 解決資料不平衡問題，優化 Recall 率。
-- **Level 6**: 加入商業邏輯（Threshold Tuning），解決模型過於保守的問題。
-- **Level 7**: 成功部署至 Streamlit Cloud。
+| Level | 里程碑 |
+| :--- | :--- |
+| Level 1 | 數據清洗與 UCI 資料集特徵工程 |
+| Level 2 | 使用 PyCaret 比較 10+ 種演算法 |
+| Level 3 | 解決資料不平衡問題 (SMOTE)，優化 Recall 率 |
+| Level 6 | 加入商業邏輯（Threshold Tuning），解決模型過於保守的問題 |
+| Level 7 | 成功部署至 Streamlit Cloud |
+| Level 8 | **[NEW]** 導入 Docker 容器化部署與 Pytest 自動化測試，完成 MLOps 基礎建設 |

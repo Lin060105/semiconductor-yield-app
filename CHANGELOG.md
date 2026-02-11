@@ -2,18 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0] - 2026-02-09
-### 🚀 Features (新功能)
-- **Advanced AutoML**: 整合 PyCaret (XGBoost, LightGBM, RF) 進行多模型競賽。
-- **Interactive Dashboard**: 基於 Streamlit 的多頁籤介面，支援單筆與批次預測。
-- **Fail Ranking**: 自動標記並排序高風險 (Fail) 產品。
-- **Explainable AI**: 內建 SHAP Summary 與 Feature Importance 圖表。
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### 🛠️ Infrastructure (基礎建設)
-- **Dockerized**: 支援 Docker 一鍵部署 (`docker run`).
-- **CI/CD**: GitHub Actions 自動執行 Linting 與 Pytest。
-- **Testing**: 新增 `tests/test_predict.py` 確保預測管線穩定性。
+## [1.0.0] - 2026-02-11
+### Added
+- **Docker Support**: Added `Dockerfile` for containerized deployment.
+- **CI/CD**: Added `tests/` directory with `pytest` for automated testing.
+- **Model Upgrade**: Integrated **CatBoost** classifier for better recall on imbalanced data.
+- **Explainability**: Added **SHAP Summary Plot** tab in Streamlit app.
+- **Documentation**: Added `docs/data_pipeline.md` with Mermaid diagram.
+- **Metrics**: Added `reports/model_comparison.csv` to track RF, XGBoost, and CatBoost performance.
 
-### 📚 Documentation (文件)
-- 新增 `docs/data_pipeline.md` 包含 Mermaid 架構圖。
-- 更新 `README.md` 加入 Docker 使用教學。
+### Changed
+- **UI Overhaul**: Updated `app.py` to use Streamlit Tabs layout (Prediction, Explainability, Performance).
+- **Dependency Management**: Locked versions in `requirements.txt` to prevent PyCaret/Sklearn conflicts.
+- **README**: Rewritten `README.md` with Docker instructions, Tech Stack, and Business Context.
+
+### Fixed
+- Fixed class imbalance issue using **SMOTE** in training pipeline.
+- Resolved scikit-learn version compatibility issues with PyCaret 3.0.
+
+## [0.1.0] - 2025-10-15
+### Added
+- Initial release of Semiconductor Yield Prediction App.
+- Basic Random Forest model implementation.
+- Simple Streamlit interface for single prediction.
+- Data preprocessing script for SECOM dataset.

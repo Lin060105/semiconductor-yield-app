@@ -1,84 +1,65 @@
-# 🏭 Data Pipeline & Model Training Workflow
+# 🏭 半導體良率預測 - 資料處理與建模流程
 
-本文檔詳細說明半導體良率預測系統的資料處理流與模型訓練架構。
+本文件詳細說明專案的資料流向 (Data Pipeline)，從原始 SECOM 數據集到最終的模型部署。
 
-## 🛠️ 系統架構流程圖 (Mermaid)
+## 🛠️ 數據處理流程圖 (Pipeline Visualization)
 
 ```mermaid
 graph TD
     %% 定義樣式
-    classDef data fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef script fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-    classDef artifact fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+    classDef storage fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef process fill:#e1f5fe,stroke:#0277bd,stroke-width:2px;
+    classDef model fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    classDef output fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
 
     %% 節點定義
-    RawData[("📂 Raw Data<br/>(secom.data / labels)")]:::data
-    ScriptPre[("🐍 scripts/01_data_preprocessing.py<br/>(資料清洗腳本)")]:::script
+    RawData[("📂 原始數據 (SECOM)")]:::storage
+    Cleaning["🧹 資料清洗\n(去除常數特徵, 填補遺失值)"]:::process
+    FeatureEng["⚙️ 特徵工程\n(相關性過濾, 降維)"]:::process
+    ProcessedData[("💾 處理後數據\n(secom_processed.csv)")]:::storage
     
-    ProcessedData[("📄 secom_processed.csv<br/>(已清洗資料)")]:::data
-    
-    ScriptTrain[("🐍 train_upgrade.py<br/>(模型訓練與升級腳本)")]:::script
-    
-    subgraph AutoML[PyCaret AutoML Engine]
-        Setup[環境設定<br/>(Fix Imbalance / Normalize)]
-        Compare[模型競賽<br/>(RF vs XGBoost vs LightGBM)]
-        Tune[最佳模型優化]
+    subgraph PyCaret Training [PyCaret 自動化訓練環境]
+        Setup["⚖️ 環境設定 (Setup)\n(SMOTE 不平衡處理, 正規化)"]:::process
+        Compare["🏎️ 模型競賽\n(RF, XGBoost, LightGBM, CatBoost)"]:::model
+        BestModel["🏆 選定最佳模型\n(CatBoost Classifier)"]:::model
+        Tuning["🔧 模型優化與校準"]:::model
     end
-    
-    Model[("🤖 final_yield_prediction_model.pkl<br/>(最終模型)")]:::artifact
-    Reports[("📊 Evaluation Reports<br/>(SHAP, AUC, Confusion Matrix)")]:::artifact
-    
-    App[("🚀 Streamlit App<br/>(app.py)")]:::script
 
-    %% 流程連線
-    RawData --> ScriptPre
-    ScriptPre -->|去除常量, 填補缺失值| ProcessedData
-    
-    ProcessedData --> ScriptTrain
-    ScriptTrain --> Setup
+    Eval["📊 模型評估\n(AUC, Recall, Confusion Matrix)"]:::output
+    Explain["🧠 模型解釋\n(SHAP Values Analysis)"]:::output
+    Deployment["🚀 Streamlit App 部署"]:::output
+
+    %% 連線與流程
+    RawData --> Cleaning
+    Cleaning --> FeatureEng
+    FeatureEng --> ProcessedData
+    ProcessedData --> Setup
     Setup --> Compare
-    Compare -->|選出 AUC 最高者| Tune
-    
-    Tune --> Model
-    Tune --> Reports
-    
-    Model --> App
-    Reports --> App
-
-    ---
-
-### 第二部分：資料處理細節
-
-這部分說明了前面的清洗邏輯。
-
-```markdown
-## 📊 資料處理細節 (Data Preprocessing)
-
-### 1. 資料清洗 (`scripts/01_data_preprocessing.py`)
-原始 SECOM 數據集包含大量缺失值 (NaN) 與冗餘特徵，我們執行以下處理：
-* **缺失值處理**：使用 KNN Imputer 或 Mean/Median 填補。
-* **特徵篩選**：
-    * 移除單一值 (Constant) 欄位。
-    * 移除高相關性 (High Correlation) 特徵以避免共線性。
-* **格式統一**：合併 Feature 與 Label，輸出為標準 CSV 格式。
+    Compare --> BestModel
+    BestModel --> Tuning
+    Tuning --> Eval
+    Eval --> Explain
+    BestModel --> Deployment
 
 
----
+## 📝 詳細步驟說明
 
-### 第三部分：模型訓練與輸出產物
+### 1. 資料前處理 (Data Preprocessing)
+* **來源**：UCI SECOM Dataset (1567 筆樣本, 591 個感測器特徵)。
+* **清洗**：
+    * 剔除缺失值超過 50% 的欄位。
+    * 移除單一數值（變異數為 0）的無效特徵。
+    * 使用中位數 (Median) 填補剩餘缺失值。
+* **輸出**：生成 `secom_processed.csv`，保留約 400+ 個有效特徵。
 
-這部分說明了 AutoML 機制和最終產出的檔案。
-
-### 2. 模型訓練與評估 (`train_upgrade.py`)
+### 2. 模型訓練 (Model Training)
 使用 **PyCaret** 框架進行自動化機器學習：
-* **不平衡處理 (Fix Imbalance)**：由於良率資料通常 Pass 遠多於 Fail，我們使用 SMOTE 或類似技術平衡樣本。
-* **多模型比較**：同時訓練 Random Forest, XGBoost, LightGBM，依據 **AUC** 指標自動選擇最佳模型。
-* **可解釋性 AI (XAI)**：
-    * 整合 **SHAP (SHapley Additive exPlanations)** 計算特徵貢獻度。
-    * 生成 Confusion Matrix 確認召回率 (Recall)。
+* **不平衡處理**：由於良率異常 (Fail) 樣本極少 (~6%)，訓練過程使用 **SMOTE** 進行過採樣。
+* **模型比較**：針對 Recall (召回率) 進行優化，比較了 Random Forest, XGBoost, LightGBM 與 CatBoost。
+* **最終選擇**：**CatBoost** 因在 Recall 與 F1-Score 表現最佳而被選為最終模型。
 
-## 📁 輸出產物
-執行訓練後，系統會生成以下關鍵檔案供 App 使用：
-1.  `final_yield_prediction_model.pkl`: 封裝好的預測管線。
-2.  `reports/SHAP Summary.png`: 全局特徵影響力分析圖。
-3.  `reports/model_comparison.csv`: 各模型效能評比表。
+
+### 3. 可解釋性分析 (Explainability)
+為了讓工程師理解預測依據，整合了 **SHAP (SHapley Additive exPlanations)**：
+* 計算每個感測器對良率判定的貢獻度。
+* 生成 Summary Plot 以視覺化特徵重要性。

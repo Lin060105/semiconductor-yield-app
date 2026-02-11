@@ -5,10 +5,10 @@ import os
 import shutil
 import matplotlib.pyplot as plt
 
-# 設定 Matplotlib 後端
+# 設定 Matplotlib 後端，避免在無介面伺服器執行時報錯
 plt.switch_backend('Agg')
 
-print("🚀 開始執行模型升級與報告生成程序 (v3.0 多模型比較版)...")
+print("🚀 開始執行模型升級與報告生成程序 (v4.0 專業多模型版)...")
 
 # --- 0. 環境準備 ---
 REPORT_DIR = 'reports'
@@ -33,80 +33,70 @@ with open('required_features.pkl', 'wb') as f:
     pickle.dump(required_features, f)
 
 # --- 3. 設定 PyCaret 環境 ---
-print("⚙️ 設定訓練環境...")
-# log_experiment=True 可以記錄實驗，但這裡我們保持簡單
+print("⚙️ 設定訓練環境 (處理不平衡資料)...")
+# fix_imbalance=True 使用 SMOTE 處理良率不平衡問題
 s = setup(data=dataset, target='label', session_id=123, 
           fix_imbalance=True, verbose=False)
 
-# --- 4. 訓練與比較模型 ---
-print("🏎️ 正在比較模型 (Random Forest, XGBoost, LightGBM)...")
-# include 參數指定我們要比較的模型 ID
-# sort='AUC' 表示我們依據 AUC 來選擇最佳模型 (針對不平衡資料集 AUC 通常比 Accuracy 好)
-best_model = compare_models(include=['rf', 'xgboost', 'lightgbm'], sort='AUC', verbose=False)
+# --- 4. 訓練與比較模型 (RF, XGBoost, LightGBM, CatBoost) ---
+print("🏎️ 正在比較模型 (Random Forest, XGBoost, LightGBM, CatBoost)...")
+# 根據 Grok 建議，我們鎖定 Recall 與 F1 作為主要參考，因為半導體失效檢測更看重漏檢率
+best_model = compare_models(
+    include=['rf', 'xgboost', 'lightgbm', 'catboost'], 
+    sort='Recall',  # 優先保證能抓出失敗樣品
+    verbose=False
+)
 
-# 抓取比較結果表
+# 抓取比較結果表並儲存
 comparison_results = pull()
 comparison_csv_path = os.path.join(REPORT_DIR, 'model_comparison.csv')
 comparison_results.to_csv(comparison_csv_path)
 print(f"   -> 🏆 最佳模型已選擇: {best_model}")
 print(f"   -> 📄 模型比較報表已儲存至: {comparison_csv_path}")
 
-# --- 5. 生成評估報告 ---
+# --- 5. 生成評估報告 (含學習曲線，解決 Grok 提到的弱點) ---
 print("📊 正在生成最佳模型的評估圖表...")
 plots = {
     'confusion_matrix': 'Confusion Matrix.png',
     'auc': 'AUC.png',
     'feature': 'Feature Importance.png',
+    'learning': 'Learning Curve.png', # 新增學習曲線檢查過擬合
+    'pr': 'Precision Recall.png'     # 新增 PR 曲線針對不平衡資料
 }
 
 for plot_type, file_name in plots.items():
     try:
-        # 清除之前的圖表
         plt.clf()
         plot_model(best_model, plot=plot_type, save=True)
         
-        # PyCaret save=True 會存成 'Confusion Matrix.png' (檔名可能有空格)
-        # 我們需要確保將其移動到 reports 資料夾
-        if os.path.exists(file_name):
+        # 處理 PyCaret 存檔名稱中的空格與路徑移動
+        generated_file = f"{plot_type.capitalize()}.png" if plot_type != 'confusion_matrix' else 'Confusion Matrix.png'
+        if os.path.exists(generated_file):
             target_path = os.path.join(REPORT_DIR, file_name)
             if os.path.exists(target_path):
                 os.remove(target_path)
-            shutil.move(file_name, target_path)
+            shutil.move(generated_file, target_path)
             print(f"   -> 已儲存 {file_name}")
-        else:
-            print(f"   ⚠️ PyCaret 未生成預期檔名 {file_name}，可能已直接存入目錄或檔名不同。")
-            
     except Exception as e:
         print(f"   ⚠️ 無法生成 {file_name}: {e}")
 
-# --- 6. 生成 SHAP 解釋圖 (手動強制存檔) ---
-print("🧠 正在計算 SHAP Values (使用 Matplotlib 強制存檔)...")
+# --- 6. 生成 SHAP 解釋圖 ---
+print("🧠 正在計算 SHAP Values...")
 try:
-    # 清除畫布
     plt.close('all')
-    plt.figure(figsize=(10, 8))
+    interpret_model(best_model, plot='summary', save=True)
     
-    # 針對 Tree-based model (RF, XGB, LGBM) 進行解釋
-    interpret_model(best_model, plot='summary', save=False)
-    
-    shap_dest = os.path.join(REPORT_DIR, 'SHAP Summary.png')
-    plt.savefig(shap_dest, bbox_inches='tight', dpi=300)
-    plt.close()
-    
-    if os.path.exists(shap_dest):
-        print(f"   -> ✅ SHAP Summary 已手動成功儲存至 {shap_dest}")
-    else:
-        print("   ❌ 存檔失敗，請檢查權限。")
-
+    # interpret_model 的 save=True 通常存為 'SHAP Summary.png'
+    if os.path.exists('SHAP Summary.png'):
+        shutil.move('SHAP Summary.png', os.path.join(REPORT_DIR, 'SHAP Summary.png'))
+        print(f"   -> ✅ SHAP Summary 儲存完成")
 except Exception as e:
     print(f"   ❌ SHAP 生成失敗: {e}")
-    print("      (提示: XGBoost/LightGBM 的 SHAP 支援通常良好，若失敗請檢查 shap 版本)")
 
-# --- 7. 存檔 ---
+# --- 7. 最終模型存檔 ---
 print("💾 正在儲存最佳模型...")
 final_model = finalize_model(best_model)
 save_model(final_model, 'final_yield_prediction_model')
-# 同步複製一份到 reports 供備份或下載
 shutil.copy('final_yield_prediction_model.pkl', os.path.join(REPORT_DIR, 'final_yield_prediction_model.pkl'))
 
-print("\n🎉 階段2-步驟1 執行完成！模型比較與升級結束。")
+print("\n🎉 階段 2 步驟 1 執行完成！已完成多模型比較與學習曲線生成。")
