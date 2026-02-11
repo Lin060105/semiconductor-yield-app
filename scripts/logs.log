@@ -2044,3 +2044,1447 @@ Returning the number of logical cores instead. You can silence this warning by s
 2026-01-29 14:41:27,553:INFO:Saving 'SHAP summary.png'
 2026-01-29 14:41:28,170:INFO:Visual Rendered Successfully
 2026-01-29 14:41:28,171:INFO:interpret_model() successfully completed......................................
+2026-02-11 15:02:37,317:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:02:37,320:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:02:37,320:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:02:37,320:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:02:37,888:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2026-02-11 15:02:38,210:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-11 15:02:38,457:INFO:PyCaret ClassificationExperiment
+2026-02-11 15:02:38,457:INFO:Logging name: clf-default-name
+2026-02-11 15:02:38,457:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-02-11 15:02:38,457:INFO:version 3.0.0
+2026-02-11 15:02:38,457:INFO:Initializing setup()
+2026-02-11 15:02:38,457:INFO:self.USI: 9429
+2026-02-11 15:02:38,457:INFO:self._variable_keys: {'fold_generator', 'memory', '_ml_usecase', '_available_plots', 'pipeline', 'fold_groups_param', 'USI', 'y', 'data', 'X_test', 'fold_shuffle_param', 'target_param', 'X_train', 'seed', 'gpu_param', 'fix_imbalance', 'html_param', 'is_multiclass', 'exp_id', 'gpu_n_jobs_param', 'log_plots_param', 'y_train', 'X', 'y_test', 'idx', 'n_jobs_param', 'exp_name_log', 'logging_param'}
+2026-02-11 15:02:38,457:INFO:Checking environment
+2026-02-11 15:02:38,457:INFO:python_version: 3.9.25
+2026-02-11 15:02:38,457:INFO:python_build: ('main', 'Nov  3 2025 22:44:01')
+2026-02-11 15:02:38,457:INFO:machine: AMD64
+2026-02-11 15:02:38,466:INFO:platform: Windows-10-10.0.26100-SP0
+2026-02-11 15:02:38,466:INFO:Memory: svmem(total=34031001600, available=19403804672, percent=43.0, used=14627196928, free=19403804672)
+2026-02-11 15:02:38,467:INFO:Physical Core: 12
+2026-02-11 15:02:38,467:INFO:Logical Core: 16
+2026-02-11 15:02:38,467:INFO:Checking libraries
+2026-02-11 15:02:38,467:INFO:System:
+2026-02-11 15:02:38,467:INFO:    python: 3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]
+2026-02-11 15:02:38,467:INFO:executable: D:\anaconda3\envs\yield_lab\python.exe
+2026-02-11 15:02:38,467:INFO:   machine: Windows-10-10.0.26100-SP0
+2026-02-11 15:02:38,467:INFO:PyCaret required dependencies:
+2026-02-11 15:02:38,477:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:02:38,929:INFO:                 pip: 26.0.1
+2026-02-11 15:02:38,929:INFO:          setuptools: 80.9.0
+2026-02-11 15:02:38,929:INFO:             pycaret: 3.0.0
+2026-02-11 15:02:38,929:INFO:             IPython: 8.18.1
+2026-02-11 15:02:38,929:INFO:          ipywidgets: 8.1.8
+2026-02-11 15:02:38,929:INFO:                tqdm: 4.67.3
+2026-02-11 15:02:38,929:INFO:               numpy: 1.23.0
+2026-02-11 15:02:38,929:INFO:              pandas: 1.5.3
+2026-02-11 15:02:38,929:INFO:              jinja2: 3.1.6
+2026-02-11 15:02:38,929:INFO:               scipy: 1.11.4
+2026-02-11 15:02:38,929:INFO:              joblib: 1.2.0
+2026-02-11 15:02:38,929:INFO:             sklearn: 1.2.2
+2026-02-11 15:02:38,929:INFO:                pyod: 2.0.6
+2026-02-11 15:02:38,929:INFO:            imblearn: 0.12.4
+2026-02-11 15:02:38,929:INFO:   category_encoders: 2.6.4
+2026-02-11 15:02:38,929:INFO:            lightgbm: 4.6.0
+2026-02-11 15:02:38,929:INFO:               numba: 0.58.1
+2026-02-11 15:02:38,929:INFO:            requests: 2.32.5
+2026-02-11 15:02:38,929:INFO:          matplotlib: 3.7.3
+2026-02-11 15:02:38,929:INFO:          scikitplot: 0.3.7
+2026-02-11 15:02:38,929:INFO:         yellowbrick: 1.5
+2026-02-11 15:02:38,929:INFO:              plotly: 5.24.1
+2026-02-11 15:02:38,929:INFO:             kaleido: 1.2.0
+2026-02-11 15:02:38,929:INFO:         statsmodels: 0.14.6
+2026-02-11 15:02:38,929:INFO:              sktime: 0.21.1
+2026-02-11 15:02:38,929:INFO:               tbats: 1.1.3
+2026-02-11 15:02:38,929:INFO:            pmdarima: 2.0.4
+2026-02-11 15:02:38,929:INFO:              psutil: 7.2.2
+2026-02-11 15:02:38,929:INFO:PyCaret optional dependencies:
+2026-02-11 15:02:42,061:INFO:                shap: 0.41.0
+2026-02-11 15:02:42,061:INFO:           interpret: 0.6.6
+2026-02-11 15:02:42,061:INFO:                umap: 0.5.7
+2026-02-11 15:02:42,061:INFO:    pandas_profiling: 4.6.0
+2026-02-11 15:02:42,061:INFO:  explainerdashboard: 0.4.2.2
+2026-02-11 15:02:42,061:INFO:             autoviz: 0.1.902
+2026-02-11 15:02:42,061:INFO:           fairlearn: 0.7.0
+2026-02-11 15:02:42,061:INFO:             xgboost: 1.6.2
+2026-02-11 15:02:42,061:INFO:            catboost: 1.2.8
+2026-02-11 15:02:42,061:INFO:              kmodes: 0.12.2
+2026-02-11 15:02:42,061:INFO:             mlxtend: 0.23.1
+2026-02-11 15:02:42,061:INFO:       statsforecast: 1.5.0
+2026-02-11 15:02:42,061:INFO:        tune_sklearn: 0.5.0
+2026-02-11 15:02:42,061:INFO:                 ray: 2.51.2
+2026-02-11 15:02:42,061:INFO:            hyperopt: 0.2.7
+2026-02-11 15:02:42,061:INFO:              optuna: 4.7.0
+2026-02-11 15:02:42,061:INFO:               skopt: 0.10.2
+2026-02-11 15:02:42,061:INFO:              mlflow: 3.1.4
+2026-02-11 15:02:42,061:INFO:              gradio: 3.50.2
+2026-02-11 15:02:42,061:INFO:             fastapi: 0.125.0
+2026-02-11 15:02:42,061:INFO:             uvicorn: 0.39.0
+2026-02-11 15:02:42,061:INFO:              m2cgen: 0.10.0
+2026-02-11 15:02:42,061:INFO:           evidently: 0.2.8
+2026-02-11 15:02:42,061:INFO:               fugue: 0.8.6
+2026-02-11 15:02:42,061:INFO:           streamlit: 1.50.0
+2026-02-11 15:02:42,061:INFO:             prophet: Not installed
+2026-02-11 15:02:42,061:INFO:None
+2026-02-11 15:02:42,061:INFO:Set up data.
+2026-02-11 15:02:42,114:INFO:Set up train/test split.
+2026-02-11 15:02:42,123:INFO:Set up index.
+2026-02-11 15:02:42,124:INFO:Set up folding strategy.
+2026-02-11 15:02:42,124:INFO:Assigning column types.
+2026-02-11 15:02:42,132:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-02-11 15:02:42,154:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,156:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,175:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,192:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,231:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,231:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,247:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,248:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,249:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-02-11 15:02:42,275:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,291:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,292:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,318:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:02:42,334:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,335:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,335:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-02-11 15:02:42,376:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,377:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,430:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,432:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,454:INFO:Preparing preprocessing pipeline...
+2026-02-11 15:02:42,456:INFO:Set up simple imputation.
+2026-02-11 15:02:42,519:INFO:Finished creating preprocessing pipeline.
+2026-02-11 15:02:42,524:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean',
+                                                              verbose='deprecated'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated')))],
+         verbose=False)
+2026-02-11 15:02:42,524:INFO:Creating final display dataframe.
+2026-02-11 15:02:42,756:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target             label
+2                   Target type            Binary
+3           Original data shape       (1567, 475)
+4        Transformed data shape       (1567, 475)
+5   Transformed train set shape       (1096, 475)
+6    Transformed test set shape        (471, 475)
+7              Numeric features               474
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              9429
+2026-02-11 15:02:42,807:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,808:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,856:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:02:42,857:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:02:42,858:INFO:setup() successfully completed in 4.42s...............
+2026-02-11 15:02:42,858:INFO:Initializing load_model()
+2026-02-11 15:02:42,858:INFO:load_model(model_name=../output/final_yield_prediction_model, platform=None, authentication=None, verbose=True)
+2026-02-11 15:02:42,880:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:318: UserWarning: Trying to unpickle estimator SimpleImputer from version 1.4.2 when using version 1.2.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2026-02-11 15:02:42,882:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:318: UserWarning: Trying to unpickle estimator StandardScaler from version 1.4.2 when using version 1.2.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2026-02-11 15:02:42,883:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:318: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.4.2 when using version 1.2.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2026-02-11 15:04:52,868:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:04:52,868:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:04:52,868:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:04:52,868:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:04:53,284:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2026-02-11 15:04:53,623:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-11 15:04:53,848:INFO:PyCaret ClassificationExperiment
+2026-02-11 15:04:53,848:INFO:Logging name: clf-default-name
+2026-02-11 15:04:53,848:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-02-11 15:04:53,848:INFO:version 3.0.0
+2026-02-11 15:04:53,848:INFO:Initializing setup()
+2026-02-11 15:04:53,848:INFO:self.USI: 0a66
+2026-02-11 15:04:53,848:INFO:self._variable_keys: {'n_jobs_param', 'y_test', 'data', 'logging_param', 'memory', '_available_plots', 'target_param', 'log_plots_param', 'X', 'X_train', 'gpu_n_jobs_param', 'X_test', 'seed', 'pipeline', 'fold_groups_param', 'idx', 'y', 'is_multiclass', 'exp_id', 'fold_shuffle_param', 'exp_name_log', 'gpu_param', 'html_param', 'USI', 'fix_imbalance', '_ml_usecase', 'fold_generator', 'y_train'}
+2026-02-11 15:04:53,848:INFO:Checking environment
+2026-02-11 15:04:53,848:INFO:python_version: 3.9.25
+2026-02-11 15:04:53,848:INFO:python_build: ('main', 'Nov  3 2025 22:44:01')
+2026-02-11 15:04:53,849:INFO:machine: AMD64
+2026-02-11 15:04:53,857:INFO:platform: Windows-10-10.0.26100-SP0
+2026-02-11 15:04:53,858:INFO:Memory: svmem(total=34031001600, available=19276218368, percent=43.4, used=14754783232, free=19276218368)
+2026-02-11 15:04:53,858:INFO:Physical Core: 12
+2026-02-11 15:04:53,858:INFO:Logical Core: 16
+2026-02-11 15:04:53,858:INFO:Checking libraries
+2026-02-11 15:04:53,858:INFO:System:
+2026-02-11 15:04:53,858:INFO:    python: 3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]
+2026-02-11 15:04:53,858:INFO:executable: D:\anaconda3\envs\yield_lab\python.exe
+2026-02-11 15:04:53,858:INFO:   machine: Windows-10-10.0.26100-SP0
+2026-02-11 15:04:53,858:INFO:PyCaret required dependencies:
+2026-02-11 15:04:53,858:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:04:54,355:INFO:                 pip: 26.0.1
+2026-02-11 15:04:54,355:INFO:          setuptools: 80.9.0
+2026-02-11 15:04:54,355:INFO:             pycaret: 3.0.0
+2026-02-11 15:04:54,355:INFO:             IPython: 8.18.1
+2026-02-11 15:04:54,355:INFO:          ipywidgets: 8.1.8
+2026-02-11 15:04:54,355:INFO:                tqdm: 4.67.3
+2026-02-11 15:04:54,355:INFO:               numpy: 1.23.0
+2026-02-11 15:04:54,355:INFO:              pandas: 1.5.3
+2026-02-11 15:04:54,355:INFO:              jinja2: 3.1.6
+2026-02-11 15:04:54,355:INFO:               scipy: 1.11.4
+2026-02-11 15:04:54,355:INFO:              joblib: 1.2.0
+2026-02-11 15:04:54,355:INFO:             sklearn: 1.2.2
+2026-02-11 15:04:54,355:INFO:                pyod: 2.0.6
+2026-02-11 15:04:54,355:INFO:            imblearn: 0.12.4
+2026-02-11 15:04:54,355:INFO:   category_encoders: 2.6.4
+2026-02-11 15:04:54,355:INFO:            lightgbm: 4.6.0
+2026-02-11 15:04:54,355:INFO:               numba: 0.58.1
+2026-02-11 15:04:54,355:INFO:            requests: 2.32.5
+2026-02-11 15:04:54,355:INFO:          matplotlib: 3.7.3
+2026-02-11 15:04:54,355:INFO:          scikitplot: 0.3.7
+2026-02-11 15:04:54,355:INFO:         yellowbrick: 1.5
+2026-02-11 15:04:54,355:INFO:              plotly: 5.24.1
+2026-02-11 15:04:54,355:INFO:             kaleido: 1.2.0
+2026-02-11 15:04:54,355:INFO:         statsmodels: 0.14.6
+2026-02-11 15:04:54,355:INFO:              sktime: 0.21.1
+2026-02-11 15:04:54,355:INFO:               tbats: 1.1.3
+2026-02-11 15:04:54,355:INFO:            pmdarima: 2.0.4
+2026-02-11 15:04:54,355:INFO:              psutil: 7.2.2
+2026-02-11 15:04:54,355:INFO:PyCaret optional dependencies:
+2026-02-11 15:04:56,922:INFO:                shap: 0.41.0
+2026-02-11 15:04:56,922:INFO:           interpret: 0.6.6
+2026-02-11 15:04:56,922:INFO:                umap: 0.5.7
+2026-02-11 15:04:56,922:INFO:    pandas_profiling: 4.6.0
+2026-02-11 15:04:56,922:INFO:  explainerdashboard: 0.4.2.2
+2026-02-11 15:04:56,922:INFO:             autoviz: 0.1.902
+2026-02-11 15:04:56,922:INFO:           fairlearn: 0.7.0
+2026-02-11 15:04:56,922:INFO:             xgboost: 1.6.2
+2026-02-11 15:04:56,922:INFO:            catboost: 1.2.8
+2026-02-11 15:04:56,922:INFO:              kmodes: 0.12.2
+2026-02-11 15:04:56,922:INFO:             mlxtend: 0.23.1
+2026-02-11 15:04:56,922:INFO:       statsforecast: 1.5.0
+2026-02-11 15:04:56,922:INFO:        tune_sklearn: 0.5.0
+2026-02-11 15:04:56,922:INFO:                 ray: 2.51.2
+2026-02-11 15:04:56,922:INFO:            hyperopt: 0.2.7
+2026-02-11 15:04:56,922:INFO:              optuna: 4.7.0
+2026-02-11 15:04:56,922:INFO:               skopt: 0.10.2
+2026-02-11 15:04:56,922:INFO:              mlflow: 3.1.4
+2026-02-11 15:04:56,923:INFO:              gradio: 3.50.2
+2026-02-11 15:04:56,923:INFO:             fastapi: 0.125.0
+2026-02-11 15:04:56,923:INFO:             uvicorn: 0.39.0
+2026-02-11 15:04:56,923:INFO:              m2cgen: 0.10.0
+2026-02-11 15:04:56,923:INFO:           evidently: 0.2.8
+2026-02-11 15:04:56,923:INFO:               fugue: 0.8.6
+2026-02-11 15:04:56,923:INFO:           streamlit: 1.50.0
+2026-02-11 15:04:56,923:INFO:             prophet: Not installed
+2026-02-11 15:04:56,923:INFO:None
+2026-02-11 15:04:56,923:INFO:Set up data.
+2026-02-11 15:04:56,977:INFO:Set up train/test split.
+2026-02-11 15:04:56,986:INFO:Set up index.
+2026-02-11 15:04:56,986:INFO:Set up folding strategy.
+2026-02-11 15:04:56,986:INFO:Assigning column types.
+2026-02-11 15:04:56,994:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-02-11 15:04:57,020:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,022:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,041:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,060:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,097:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,097:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,112:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,114:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,114:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-02-11 15:04:57,137:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,151:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,153:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,178:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:04:57,192:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,193:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,193:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-02-11 15:04:57,232:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,233:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,273:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,275:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,276:INFO:Preparing preprocessing pipeline...
+2026-02-11 15:04:57,277:INFO:Set up simple imputation.
+2026-02-11 15:04:57,278:INFO:Set up imbalanced handling.
+2026-02-11 15:04:57,278:INFO:Set up feature normalization.
+2026-02-11 15:04:57,402:INFO:Finished creating preprocessing pipeline.
+2026-02-11 15:04:57,408:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated'))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2026-02-11 15:04:57,408:INFO:Creating final display dataframe.
+2026-02-11 15:04:57,684:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target             label
+2                   Target type            Binary
+3           Original data shape       (1567, 475)
+4        Transformed data shape       (2517, 475)
+5   Transformed train set shape       (2046, 475)
+6    Transformed test set shape        (471, 475)
+7              Numeric features               474
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12                Fix imbalance              True
+13         Fix imbalance method             SMOTE
+14                    Normalize              True
+15             Normalize method            zscore
+16               Fold Generator   StratifiedKFold
+17                  Fold Number                10
+18                     CPU Jobs                -1
+19                      Use GPU             False
+20               Log Experiment             False
+21              Experiment Name  clf-default-name
+22                          USI              0a66
+2026-02-11 15:04:57,721:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,722:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,761:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:04:57,763:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:04:57,763:INFO:setup() successfully completed in 3.93s...............
+2026-02-11 15:04:57,764:INFO:Initializing create_model()
+2026-02-11 15:04:57,764:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001C1DEE38FD0>, estimator=rf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2026-02-11 15:04:57,764:INFO:Checking exceptions
+2026-02-11 15:04:57,764:INFO:Importing libraries
+2026-02-11 15:04:57,765:INFO:Copying training dataset
+2026-02-11 15:04:57,773:INFO:Defining folds
+2026-02-11 15:04:57,773:INFO:Declaring metric variables
+2026-02-11 15:04:57,773:INFO:Importing untrained model
+2026-02-11 15:04:57,773:INFO:Random Forest Classifier Imported successfully
+2026-02-11 15:04:57,774:INFO:Starting cross validation
+2026-02-11 15:04:57,775:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-11 15:05:02,318:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,495:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,552:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,624:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,667:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,684:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,702:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,723:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,755:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:02,797:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:07,253:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:231: UserWarning: Persisting input arguments took 1.52s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_transformer = self._memory_fit(
+
+2026-02-11 15:05:08,950:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:238: UserWarning: Persisting input arguments took 1.75s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = self._memory_transform(
+
+2026-02-11 15:05:09,066:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:238: UserWarning: Persisting input arguments took 1.22s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, y = self._memory_transform(
+
+2026-02-11 15:05:10,335:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 3.37s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:10,371:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 3.39s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:11,626:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.47s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:11,767:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.43s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:11,866:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.10s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:11,872:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.08s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:12,061:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,358:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,359:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,436:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,450:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,509:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:12,704:INFO:Calculating mean and std
+2026-02-11 15:05:12,706:INFO:Creating metrics dataframe
+2026-02-11 15:05:12,708:INFO:Finalizing model
+2026-02-11 15:05:13,632:INFO:Uploading results into container
+2026-02-11 15:05:13,632:INFO:Uploading model into container now
+2026-02-11 15:05:13,633:INFO:_master_model_container: 1
+2026-02-11 15:05:13,633:INFO:_display_container: 2
+2026-02-11 15:05:13,633:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-11 15:05:13,633:INFO:create_model() successfully completed......................................
+2026-02-11 15:05:13,736:INFO:Initializing save_model()
+2026-02-11 15:05:13,736:INFO:save_model(model=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), model_name=../output/final_yield_prediction_model, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated'))),
+                ('balance',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=FixImbalancer(estimator=SMOTE(k_neighbors=5,
+                                                                              n_jobs=None,
+                                                                              random_state=None,
+                                                                              sampling_strategy='auto')))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2026-02-11 15:05:13,736:INFO:Adding model into prep_pipe
+2026-02-11 15:05:13,764:INFO:../output/final_yield_prediction_model.pkl saved in current working directory
+2026-02-11 15:05:13,770:INFO:Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False)
+2026-02-11 15:05:13,770:INFO:save_model() successfully completed......................................
+2026-02-11 15:05:13,882:INFO:Initializing interpret_model()
+2026-02-11 15:05:13,882:INFO:interpret_model(estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=summary, save=True, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001C1DEE38FD0>)
+2026-02-11 15:05:13,882:INFO:Checking exceptions
+2026-02-11 15:05:13,882:INFO:Soft dependency imported: shap: 0.41.0
+2026-02-11 15:05:14,958:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:35: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _pt_shuffle_rec(i, indexes, index_mask, partition_tree, M, pos):
+
+2026-02-11 15:05:14,964:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:54: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def delta_minimization_order(all_masks, max_swap_size=100, num_passes=2):
+
+2026-02-11 15:05:14,966:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:63: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window(order, start, length):
+
+2026-02-11 15:05:14,966:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:69: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _reverse_window_score_gain(masks, order, start, length):
+
+2026-02-11 15:05:14,967:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_clustering.py:77: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _mask_delta_score(m1, m2):
+
+2026-02-11 15:05:14,990:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:5: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def identity(x):
+
+2026-02-11 15:05:14,991:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:10: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _identity_inverse(x):
+
+2026-02-11 15:05:14,991:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:15: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def logit(x):
+
+2026-02-11 15:05:14,991:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\links.py:20: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _logit_inverse(x):
+
+2026-02-11 15:05:15,011:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:363: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_single_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-11 15:05:15,013:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:385: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _build_fixed_multi_output(averaged_outs, last_outs, outputs, batch_positions, varying_rows, num_varying_rows, link, linearizing_weights):
+
+2026-02-11 15:05:15,014:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:428: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _init_masks(cluster_matrix, M, indices_row_pos, indptr):
+
+2026-02-11 15:05:15,014:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\utils\_masked_model.py:439: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _rec_fill_masks(cluster_matrix, indices_row_pos, indptr, indices, M, ind):
+
+2026-02-11 15:05:15,037:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:186: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _single_delta_mask(dind, masked_inputs, last_mask, data, x, noop_code):
+
+2026-02-11 15:05:15,040:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_tabular.py:197: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _delta_masking(masks, x, curr_delta_inds, varying_rows_out,
+
+2026-02-11 15:05:15,060:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\maskers\_image.py:175: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def _jit_build_partition_tree(xmin, xmax, ymin, ymax, zmin, zmax, total_ywidth, total_zwidth, M, clustering, q):
+
+2026-02-11 15:05:15,090:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\shap\explainers\_partition.py:676: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def lower_credit(i, value, M, values, clustering):
+
+2026-02-11 15:05:15,148:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-11 15:05:15,149:WARNING:[1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+
+2026-02-11 15:05:15,640:INFO:plot type: summary
+2026-02-11 15:05:15,640:INFO:Creating TreeExplainer
+2026-02-11 15:05:15,642:INFO:Compiling shap values
+2026-02-11 15:05:17,680:WARNING:No data for colormapping provided via 'c'. Parameters 'vmin', 'vmax' will be ignored
+
+2026-02-11 15:05:17,780:INFO:Saving 'SHAP summary.png'
+2026-02-11 15:05:17,953:INFO:Visual Rendered Successfully
+2026-02-11 15:05:17,953:INFO:interpret_model() successfully completed......................................
+2026-02-11 15:05:22,514:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:05:22,514:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:05:22,514:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:05:22,514:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2026-02-11 15:05:22,902:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2026-02-11 15:05:23,208:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\mlflow\utils\autologging_utils\versioning.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+2026-02-11 15:05:23,434:INFO:PyCaret ClassificationExperiment
+2026-02-11 15:05:23,435:INFO:Logging name: clf-default-name
+2026-02-11 15:05:23,435:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2026-02-11 15:05:23,435:INFO:version 3.0.0
+2026-02-11 15:05:23,435:INFO:Initializing setup()
+2026-02-11 15:05:23,435:INFO:self.USI: e281
+2026-02-11 15:05:23,435:INFO:self._variable_keys: {'X', 'X_train', 'fold_groups_param', 'X_test', 'fold_shuffle_param', 'fix_imbalance', 'USI', 'logging_param', 'fold_generator', 'is_multiclass', 'idx', 'gpu_param', 'gpu_n_jobs_param', 'exp_name_log', '_available_plots', 'y_test', 'exp_id', 'y_train', 'y', 'target_param', 'data', 'log_plots_param', 'seed', '_ml_usecase', 'pipeline', 'n_jobs_param', 'memory', 'html_param'}
+2026-02-11 15:05:23,435:INFO:Checking environment
+2026-02-11 15:05:23,435:INFO:python_version: 3.9.25
+2026-02-11 15:05:23,435:INFO:python_build: ('main', 'Nov  3 2025 22:44:01')
+2026-02-11 15:05:23,435:INFO:machine: AMD64
+2026-02-11 15:05:23,441:INFO:platform: Windows-10-10.0.26100-SP0
+2026-02-11 15:05:23,442:INFO:Memory: svmem(total=34031001600, available=19399602176, percent=43.0, used=14631399424, free=19399602176)
+2026-02-11 15:05:23,442:INFO:Physical Core: 12
+2026-02-11 15:05:23,442:INFO:Logical Core: 16
+2026-02-11 15:05:23,442:INFO:Checking libraries
+2026-02-11 15:05:23,442:INFO:System:
+2026-02-11 15:05:23,442:INFO:    python: 3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]
+2026-02-11 15:05:23,442:INFO:executable: D:\anaconda3\envs\yield_lab\python.exe
+2026-02-11 15:05:23,442:INFO:   machine: Windows-10-10.0.26100-SP0
+2026-02-11 15:05:23,442:INFO:PyCaret required dependencies:
+2026-02-11 15:05:23,442:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:23,793:INFO:                 pip: 26.0.1
+2026-02-11 15:05:23,793:INFO:          setuptools: 80.9.0
+2026-02-11 15:05:23,793:INFO:             pycaret: 3.0.0
+2026-02-11 15:05:23,793:INFO:             IPython: 8.18.1
+2026-02-11 15:05:23,793:INFO:          ipywidgets: 8.1.8
+2026-02-11 15:05:23,793:INFO:                tqdm: 4.67.3
+2026-02-11 15:05:23,793:INFO:               numpy: 1.23.0
+2026-02-11 15:05:23,793:INFO:              pandas: 1.5.3
+2026-02-11 15:05:23,793:INFO:              jinja2: 3.1.6
+2026-02-11 15:05:23,793:INFO:               scipy: 1.11.4
+2026-02-11 15:05:23,793:INFO:              joblib: 1.2.0
+2026-02-11 15:05:23,793:INFO:             sklearn: 1.2.2
+2026-02-11 15:05:23,793:INFO:                pyod: 2.0.6
+2026-02-11 15:05:23,793:INFO:            imblearn: 0.12.4
+2026-02-11 15:05:23,793:INFO:   category_encoders: 2.6.4
+2026-02-11 15:05:23,793:INFO:            lightgbm: 4.6.0
+2026-02-11 15:05:23,793:INFO:               numba: 0.58.1
+2026-02-11 15:05:23,793:INFO:            requests: 2.32.5
+2026-02-11 15:05:23,793:INFO:          matplotlib: 3.7.3
+2026-02-11 15:05:23,793:INFO:          scikitplot: 0.3.7
+2026-02-11 15:05:23,793:INFO:         yellowbrick: 1.5
+2026-02-11 15:05:23,793:INFO:              plotly: 5.24.1
+2026-02-11 15:05:23,793:INFO:             kaleido: 1.2.0
+2026-02-11 15:05:23,793:INFO:         statsmodels: 0.14.6
+2026-02-11 15:05:23,793:INFO:              sktime: 0.21.1
+2026-02-11 15:05:23,793:INFO:               tbats: 1.1.3
+2026-02-11 15:05:23,793:INFO:            pmdarima: 2.0.4
+2026-02-11 15:05:23,793:INFO:              psutil: 7.2.2
+2026-02-11 15:05:23,793:INFO:PyCaret optional dependencies:
+2026-02-11 15:05:25,544:INFO:                shap: 0.41.0
+2026-02-11 15:05:25,544:INFO:           interpret: 0.6.6
+2026-02-11 15:05:25,544:INFO:                umap: 0.5.7
+2026-02-11 15:05:25,544:INFO:    pandas_profiling: 4.6.0
+2026-02-11 15:05:25,544:INFO:  explainerdashboard: 0.4.2.2
+2026-02-11 15:05:25,544:INFO:             autoviz: 0.1.902
+2026-02-11 15:05:25,544:INFO:           fairlearn: 0.7.0
+2026-02-11 15:05:25,544:INFO:             xgboost: 1.6.2
+2026-02-11 15:05:25,544:INFO:            catboost: 1.2.8
+2026-02-11 15:05:25,544:INFO:              kmodes: 0.12.2
+2026-02-11 15:05:25,544:INFO:             mlxtend: 0.23.1
+2026-02-11 15:05:25,544:INFO:       statsforecast: 1.5.0
+2026-02-11 15:05:25,544:INFO:        tune_sklearn: 0.5.0
+2026-02-11 15:05:25,544:INFO:                 ray: 2.51.2
+2026-02-11 15:05:25,544:INFO:            hyperopt: 0.2.7
+2026-02-11 15:05:25,544:INFO:              optuna: 4.7.0
+2026-02-11 15:05:25,544:INFO:               skopt: 0.10.2
+2026-02-11 15:05:25,544:INFO:              mlflow: 3.1.4
+2026-02-11 15:05:25,544:INFO:              gradio: 3.50.2
+2026-02-11 15:05:25,544:INFO:             fastapi: 0.125.0
+2026-02-11 15:05:25,544:INFO:             uvicorn: 0.39.0
+2026-02-11 15:05:25,544:INFO:              m2cgen: 0.10.0
+2026-02-11 15:05:25,544:INFO:           evidently: 0.2.8
+2026-02-11 15:05:25,544:INFO:               fugue: 0.8.6
+2026-02-11 15:05:25,544:INFO:           streamlit: 1.50.0
+2026-02-11 15:05:25,544:INFO:             prophet: Not installed
+2026-02-11 15:05:25,544:INFO:None
+2026-02-11 15:05:25,544:INFO:Set up data.
+2026-02-11 15:05:25,597:INFO:Set up train/test split.
+2026-02-11 15:05:25,606:INFO:Set up index.
+2026-02-11 15:05:25,607:INFO:Set up folding strategy.
+2026-02-11 15:05:25,607:INFO:Assigning column types.
+2026-02-11 15:05:25,612:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2026-02-11 15:05:25,637:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,638:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,657:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,676:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,715:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,715:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,729:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,731:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,731:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2026-02-11 15:05:25,753:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,767:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,768:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,793:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2026-02-11 15:05:25,806:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,808:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,808:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2026-02-11 15:05:25,849:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,850:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,886:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:25,888:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:25,889:INFO:Preparing preprocessing pipeline...
+2026-02-11 15:05:25,891:INFO:Set up simple imputation.
+2026-02-11 15:05:25,918:INFO:Finished creating preprocessing pipeline.
+2026-02-11 15:05:25,922:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean',
+                                                              verbose='deprecated'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent',
+                                                              verbose='deprecated')))],
+         verbose=False)
+2026-02-11 15:05:25,922:INFO:Creating final display dataframe.
+2026-02-11 15:05:26,032:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target             label
+2                   Target type            Binary
+3           Original data shape       (1567, 475)
+4        Transformed data shape       (1567, 475)
+5   Transformed train set shape       (1096, 475)
+6    Transformed test set shape        (471, 475)
+7              Numeric features               474
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              e281
+2026-02-11 15:05:26,071:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:26,072:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:26,109:INFO:Soft dependency imported: xgboost: 1.6.2
+2026-02-11 15:05:26,110:INFO:Soft dependency imported: catboost: 1.2.8
+2026-02-11 15:05:26,111:INFO:setup() successfully completed in 2.69s...............
+2026-02-11 15:05:26,112:INFO:Initializing load_model()
+2026-02-11 15:05:26,112:INFO:load_model(model_name=../output/final_yield_prediction_model, platform=None, authentication=None, verbose=True)
+2026-02-11 15:05:26,154:INFO:Initializing compare_models()
+2026-02-11 15:05:26,154:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, include=['xgboost', 'lightgbm', 'rf'], fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, 'include': ['xgboost', 'lightgbm', 'rf'], 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2026-02-11 15:05:26,154:INFO:Checking exceptions
+2026-02-11 15:05:26,160:INFO:Preparing display monitor
+2026-02-11 15:05:26,164:INFO:Initializing Extreme Gradient Boosting
+2026-02-11 15:05:26,164:INFO:Total runtime is 0.0 minutes
+2026-02-11 15:05:26,164:INFO:SubProcess create_model() called ==================================
+2026-02-11 15:05:26,165:INFO:Initializing create_model()
+2026-02-11 15:05:26,165:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001B2013876A0>, model_only=True, return_train_score=False, kwargs={})
+2026-02-11 15:05:26,165:INFO:Checking exceptions
+2026-02-11 15:05:26,165:INFO:Importing libraries
+2026-02-11 15:05:26,165:INFO:Copying training dataset
+2026-02-11 15:05:26,174:INFO:Defining folds
+2026-02-11 15:05:26,174:INFO:Declaring metric variables
+2026-02-11 15:05:26,174:INFO:Importing untrained model
+2026-02-11 15:05:26,174:INFO:Extreme Gradient Boosting Imported successfully
+2026-02-11 15:05:26,174:INFO:Starting cross validation
+2026-02-11 15:05:26,175:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-11 15:05:30,511:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,567:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,595:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,622:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,663:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,668:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,712:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,751:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,752:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:30,760:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\xgboost\compat.py:105: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-02-11 15:05:31,364:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,388:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,394:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,450:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,476:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,519:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,594:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,596:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,600:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:31,645:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:38,961:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:39,465:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:39,574:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:39,575:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:39,814:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:39,994:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:40,072:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:40,087:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:40,338:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:40,339:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:40,502:INFO:Calculating mean and std
+2026-02-11 15:05:40,503:INFO:Creating metrics dataframe
+2026-02-11 15:05:40,549:INFO:Uploading results into container
+2026-02-11 15:05:40,550:INFO:Uploading model into container now
+2026-02-11 15:05:40,551:INFO:_master_model_container: 1
+2026-02-11 15:05:40,551:INFO:_display_container: 2
+2026-02-11 15:05:40,551:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=-1,
+              num_parallel_tree=None, objective='binary:logistic',
+              predictor=None, random_state=123, reg_alpha=None, ...)
+2026-02-11 15:05:40,551:INFO:create_model() successfully completed......................................
+2026-02-11 15:05:40,674:INFO:SubProcess create_model() end ==================================
+2026-02-11 15:05:40,675:INFO:Creating metrics dataframe
+2026-02-11 15:05:40,679:INFO:Initializing Light Gradient Boosting Machine
+2026-02-11 15:05:40,679:INFO:Total runtime is 0.24191327889760336 minutes
+2026-02-11 15:05:40,679:INFO:SubProcess create_model() called ==================================
+2026-02-11 15:05:40,679:INFO:Initializing create_model()
+2026-02-11 15:05:40,679:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001B2013876A0>, model_only=True, return_train_score=False, kwargs={})
+2026-02-11 15:05:40,679:INFO:Checking exceptions
+2026-02-11 15:05:40,679:INFO:Importing libraries
+2026-02-11 15:05:40,679:INFO:Copying training dataset
+2026-02-11 15:05:40,689:INFO:Defining folds
+2026-02-11 15:05:40,689:INFO:Declaring metric variables
+2026-02-11 15:05:40,690:INFO:Importing untrained model
+2026-02-11 15:05:40,690:INFO:Light Gradient Boosting Machine Imported successfully
+2026-02-11 15:05:40,690:INFO:Starting cross validation
+2026-02-11 15:05:40,691:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-11 15:05:54,012:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.50s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:54,297:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.54s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:54,402:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:54,456:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:54,462:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.77s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:05:54,915:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:54,921:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:54,923:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:54,928:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:54,941:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:54,962:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:05:54,999:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\_distutils_hack\__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+
+2026-02-11 15:05:55,560:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:319: UserWarning: Persisting input arguments took 0.69s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:05:55,593:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:03,534:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.99s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:04,115:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.57s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:04,423:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.90s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:04,575:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.84s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:04,634:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.68s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:06:05,016:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:05,224:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:05,272:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.82s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:06:05,284:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.73s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:06:05,609:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:05,689:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:05,762:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 0.92s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:06:05,965:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:06,188:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:310: UserWarning: Persisting input arguments took 1.20s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  X, _ = self._memory_full_transform(self, X, None, with_final=False)
+
+2026-02-11 15:06:06,491:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:06,748:INFO:Calculating mean and std
+2026-02-11 15:06:06,750:INFO:Creating metrics dataframe
+2026-02-11 15:06:06,795:INFO:Uploading results into container
+2026-02-11 15:06:06,795:INFO:Uploading model into container now
+2026-02-11 15:06:06,796:INFO:_master_model_container: 2
+2026-02-11 15:06:06,796:INFO:_display_container: 2
+2026-02-11 15:06:06,796:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2026-02-11 15:06:06,797:INFO:create_model() successfully completed......................................
+2026-02-11 15:06:06,904:INFO:SubProcess create_model() end ==================================
+2026-02-11 15:06:06,904:INFO:Creating metrics dataframe
+2026-02-11 15:06:06,908:INFO:Initializing Random Forest Classifier
+2026-02-11 15:06:06,908:INFO:Total runtime is 0.6790698369344076 minutes
+2026-02-11 15:06:06,908:INFO:SubProcess create_model() called ==================================
+2026-02-11 15:06:06,908:INFO:Initializing create_model()
+2026-02-11 15:06:06,908:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001B2013876A0>, model_only=True, return_train_score=False, kwargs={})
+2026-02-11 15:06:06,908:INFO:Checking exceptions
+2026-02-11 15:06:06,908:INFO:Importing libraries
+2026-02-11 15:06:06,908:INFO:Copying training dataset
+2026-02-11 15:06:06,919:INFO:Defining folds
+2026-02-11 15:06:06,919:INFO:Declaring metric variables
+2026-02-11 15:06:06,920:INFO:Importing untrained model
+2026-02-11 15:06:06,920:INFO:Random Forest Classifier Imported successfully
+2026-02-11 15:06:06,920:INFO:Starting cross validation
+2026-02-11 15:06:06,922:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2026-02-11 15:06:11,395:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.58s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:11,467:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 1.25s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:11,548:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.63s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:11,673:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.55s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:11,679:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\pycaret\internal\pipeline.py:260: UserWarning: Persisting input arguments took 0.64s to run.
+If this happens often in your code, it can cause performance problems 
+(results will be correct in all cases). 
+The reason for this is probably some large input arguments for a wrapped
+ function (e.g. large strings).
+THIS IS A JOBLIB ISSUE. If you can, kindly provide the joblib's team with an
+ example so that they can fix the problem.
+  fitted_estimator = self._memory_fit(
+
+2026-02-11 15:06:11,790:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:11,905:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:11,966:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,035:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,057:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,069:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,119:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,124:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,284:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,666:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2026-02-11 15:06:12,774:INFO:Calculating mean and std
+2026-02-11 15:06:12,775:INFO:Creating metrics dataframe
+2026-02-11 15:06:12,799:INFO:Uploading results into container
+2026-02-11 15:06:12,799:INFO:Uploading model into container now
+2026-02-11 15:06:12,800:INFO:_master_model_container: 3
+2026-02-11 15:06:12,800:INFO:_display_container: 2
+2026-02-11 15:06:12,800:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       n_estimators=100, n_jobs=-1, oob_score=False,
+                       random_state=123, verbose=0, warm_start=False)
+2026-02-11 15:06:12,800:INFO:create_model() successfully completed......................................
+2026-02-11 15:06:12,905:INFO:SubProcess create_model() end ==================================
+2026-02-11 15:06:12,906:INFO:Creating metrics dataframe
+2026-02-11 15:06:12,912:INFO:Initializing create_model()
+2026-02-11 15:06:12,912:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, gamma=None,
+              gpu_id=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, n_estimators=100, n_jobs=-1,
+              num_parallel_tree=None, objective='binary:logistic',
+              predictor=None, random_state=123, reg_alpha=None, ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2026-02-11 15:06:12,912:INFO:Checking exceptions
+2026-02-11 15:06:12,912:INFO:Importing libraries
+2026-02-11 15:06:12,912:INFO:Copying training dataset
+2026-02-11 15:06:12,922:INFO:Defining folds
+2026-02-11 15:06:12,922:INFO:Declaring metric variables
+2026-02-11 15:06:12,922:INFO:Importing untrained model
+2026-02-11 15:06:12,922:INFO:Declaring custom model
+2026-02-11 15:06:12,923:INFO:Extreme Gradient Boosting Imported successfully
+2026-02-11 15:06:12,924:INFO:Cross validation set to False
+2026-02-11 15:06:12,924:INFO:Fitting Model
+2026-02-11 15:06:14,572:INFO:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, gamma=0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.300000012, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=6, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=100,
+              n_jobs=-1, num_parallel_tree=1, objective='binary:logistic',
+              predictor='auto', random_state=123, reg_alpha=0, ...)
+2026-02-11 15:06:14,572:INFO:create_model() successfully completed......................................
+2026-02-11 15:06:14,735:INFO:_master_model_container: 3
+2026-02-11 15:06:14,735:INFO:_display_container: 2
+2026-02-11 15:06:14,737:INFO:XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, gamma=0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.300000012, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=6, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=100,
+              n_jobs=-1, num_parallel_tree=1, objective='binary:logistic',
+              predictor='auto', random_state=123, reg_alpha=0, ...)
+2026-02-11 15:06:14,737:INFO:compare_models() successfully completed......................................
+2026-02-11 15:06:14,753:INFO:Initializing plot_model()
+2026-02-11 15:06:14,753:INFO:plot_model(plot=confusion_matrix, fold=None, use_train_data=False, verbose=True, display=None, display_format=None, estimator=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, system=True)
+2026-02-11 15:06:14,753:INFO:Checking exceptions
+2026-02-11 15:06:14,790:INFO:Preloading libraries
+2026-02-11 15:06:14,800:INFO:Copying training dataset
+2026-02-11 15:06:14,800:INFO:Plot type: confusion_matrix
+2026-02-11 15:06:15,060:INFO:Fitting Model
+2026-02-11 15:06:15,061:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+
+2026-02-11 15:06:15,061:INFO:Scoring test/hold-out set
+2026-02-11 15:06:15,118:INFO:Saving 'Confusion Matrix.png'
+2026-02-11 15:06:15,186:INFO:Visual Rendered Successfully
+2026-02-11 15:06:15,289:INFO:plot_model() successfully completed......................................
+2026-02-11 15:06:15,297:INFO:Initializing plot_model()
+2026-02-11 15:06:15,297:INFO:plot_model(plot=auc, fold=None, use_train_data=False, verbose=True, display=None, display_format=None, estimator=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, system=True)
+2026-02-11 15:06:15,297:INFO:Checking exceptions
+2026-02-11 15:06:15,316:INFO:Preloading libraries
+2026-02-11 15:06:15,320:INFO:Copying training dataset
+2026-02-11 15:06:15,320:INFO:Plot type: auc
+2026-02-11 15:06:15,460:INFO:Fitting Model
+2026-02-11 15:06:15,460:WARNING:D:\anaconda3\envs\yield_lab\lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+
+2026-02-11 15:06:15,461:INFO:Scoring test/hold-out set
+2026-02-11 15:06:15,512:INFO:Saving 'AUC.png'
+2026-02-11 15:06:15,613:INFO:Visual Rendered Successfully
+2026-02-11 15:06:15,714:INFO:plot_model() successfully completed......................................
+2026-02-11 15:06:15,720:INFO:Initializing plot_model()
+2026-02-11 15:06:15,721:INFO:plot_model(plot=feature, fold=None, use_train_data=False, verbose=True, display=None, display_format=None, estimator=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, system=True)
+2026-02-11 15:06:15,721:INFO:Checking exceptions
+2026-02-11 15:06:15,737:INFO:Preloading libraries
+2026-02-11 15:06:15,741:INFO:Copying training dataset
+2026-02-11 15:06:15,741:INFO:Plot type: feature
+2026-02-11 15:06:15,742:WARNING:No coef_ found. Trying feature_importances_
+2026-02-11 15:06:15,838:INFO:Saving 'Feature Importance.png'
+2026-02-11 15:06:15,914:INFO:Visual Rendered Successfully
+2026-02-11 15:06:16,013:INFO:plot_model() successfully completed......................................
+2026-02-11 15:06:16,022:INFO:Initializing plot_model()
+2026-02-11 15:06:16,022:INFO:plot_model(plot=learning, fold=None, use_train_data=False, verbose=True, display=None, display_format=None, estimator=Pipeline(memory=FastMemory(location=C:\Users\user\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_1', 'feature_2',
+                                             'feature_3', 'feature_4',
+                                             'feature_5', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_15', 'feature_16',
+                                             'feature_17', 'feature_18',
+                                             'fea...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight=None, criterion='gini',
+                                        max_depth=None, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0.0,
+                                        min_samples_leaf=1, min_samples_split=2,
+                                        min_weight_fraction_leaf=0.0,
+                                        n_estimators=100, n_jobs=-1,
+                                        oob_score=False, random_state=123,
+                                        verbose=0, warm_start=False))],
+         verbose=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=True, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001B2320C3E20>, system=True)
+2026-02-11 15:06:16,022:INFO:Checking exceptions
+2026-02-11 15:06:16,038:INFO:Preloading libraries
+2026-02-11 15:06:16,042:INFO:Copying training dataset
+2026-02-11 15:06:16,042:INFO:Plot type: learning
+2026-02-11 15:06:16,188:INFO:Fitting Model
+2026-02-11 15:06:42,260:INFO:Saving 'Learning Curve.png'
+2026-02-11 15:06:42,439:INFO:Visual Rendered Successfully
+2026-02-11 15:06:42,560:INFO:plot_model() successfully completed......................................

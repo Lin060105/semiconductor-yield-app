@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import os
-import pickle
+import shutil
 from pycaret.classification import load_model, predict_model
-import matplotlib.pyplot as plt
+from PIL import Image
 
 # --- 1. 頁面設定 ---
 st.set_page_config(
@@ -13,180 +13,199 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🏭 半導體良率預測系統 (v2.0 Pro)")
+st.title("🏭 半導體良率預測系統 (v3.0 Ultimate)")
 st.markdown("""
-本系統利用 **CatBoost / Random Forest** 整合模型預測晶片良率 (Pass/Fail)。
-並提供模型解釋 (SHAP) 與多模型效能比較報告。
+本系統利用 **CatBoost / Random Forest** 整合模型預測晶片良率。
+新功能：**Fail Ranking** (優先處理高風險晶片) 與 **完整模型評估報告**。
 """)
 
 # --- 2. 載入模型與資源 ---
 @st.cache_resource
 def load_prediction_model():
-    # 優先載入新的最佳模型，若無則載入舊的
-    if os.path.exists('final_yield_prediction_model.pkl'):
-        return load_model('final_yield_prediction_model')
-    elif os.path.exists('reports/final_yield_prediction_model.pkl'):
-        return load_model('reports/final_yield_prediction_model')
-    else:
-        st.error("❌ 找不到模型檔案，請先執行 train_upgrade.py")
-        return None
+    # 嘗試多個路徑載入模型
+    paths = [
+        'output/final_yield_prediction_model', 
+        'final_yield_prediction_model',
+        'reports/final_yield_prediction_model'
+    ]
+    
+    for path in paths:
+        # PyCaret load_model 不需要 .pkl 副檔名
+        if os.path.exists(path + '.pkl'):
+            try:
+                return load_model(path)
+            except:
+                continue
+    return None
 
 model = load_prediction_model()
+if not model:
+    st.error("❌ 找不到模型檔案，請確認 `output/final_yield_prediction_model.pkl` 存在。")
 
 # 載入特徵清單 (確保輸入順序正確)
+required_features = [f'Sensor_{i}' for i in range(1, 11)] # 預設 fallback
 try:
     if os.path.exists('required_features.pkl'):
+        import pickle
         with open('required_features.pkl', 'rb') as f:
             required_features = pickle.load(f)
-    else:
-        st.warning("⚠️ 找不到 required_features.pkl，將使用預設特徵。")
-        required_features = [f'Sensor_{i}' for i in range(1, 11)]
 except Exception as e:
-    st.error(f"⚠️ 載入特徵清單失敗: {e}")
-    required_features = [f'Sensor_{i}' for i in range(1, 11)]
+    pass # 使用預設值
 
 # --- 3. 建立分頁 ---
-tab1, tab2, tab3 = st.tabs(["🔍 單點/批次預測", "📊 模型解釋 (SHAP)", "🏆 模型效能報告"])
+tab1, tab2, tab3 = st.tabs(["🔍 預測與高風險清單", "📊 模型解釋 (SHAP)", "🏆 模型效能報告"])
 
-# === Tab 1: 預測功能 ===
+# === Tab 1: 預測功能 (含 Fail Ranking) ===
 with tab1:
-    st.header("線上預測與模擬")
-    
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.subheader("輸入感測器數值")
+        st.subheader("單點模擬")
         input_data = {}
-        # 為了演示，只顯示前 5 個特徵的輸入框
-        display_features = required_features[:5] if len(required_features) > 5 else required_features
+        # 為了演示，只顯示前 5 個特徵
+        display_features = required_features[:5]
         for feature in display_features:
             val = st.number_input(f"{feature}", value=0.0)
             input_data[feature] = val
-        
-        if len(required_features) > 5:
-            st.caption(f"*(已隱藏剩餘 {len(required_features)-5} 個特徵，預設為 0)*")
-            # 其他特徵補 0 (模擬)
+            
+        predict_btn = st.button("🚀 執行模擬預測", type="primary")
+
+        if predict_btn and model:
+            # 補齊其他特徵為 0
             for feature in required_features[5:]:
                 input_data[feature] = 0.0
+                
+            df_input = pd.DataFrame([input_data])
+            prediction = predict_model(model, data=df_input)
             
-        predict_btn = st.button("🚀 執行預測", type="primary")
+            # 處理 PyCaret 3.x 輸出
+            try:
+                label = prediction['prediction_label'].iloc[0]
+                score = prediction['prediction_score'].iloc[0]
+                
+                if label == 1:
+                    st.error(f"⚠️ 預測結果: **Fail (異常)**")
+                    st.metric("異常機率", f"{score:.2%}")
+                else:
+                    st.success(f"✅ 預測結果: **Pass (正常)**")
+                    st.metric("安全信心", f"{score:.2%}")
+            except Exception as e:
+                st.error(f"解析錯誤: {e}")
 
     with col2:
-        st.subheader("預測結果")
-        if predict_btn and model:
-            try:
-                df_input = pd.DataFrame([input_data])
-                prediction = predict_model(model, data=df_input)
-                
-                # PyCaret 3.x 輸出欄位處理
-                label_col = 'prediction_label' if 'prediction_label' in prediction.columns else 'Label'
-                score_col = 'prediction_score' if 'prediction_score' in prediction.columns else 'Score'
-                
-                if label_col in prediction.columns:
-                    result = prediction[label_col].iloc[0]
-                    score = prediction[score_col].iloc[0]
-                    
-                    # 假設 1 或 '1' 為 Fail
-                    if str(result) == '1' or result == 1: 
-                        st.error(f"⚠️ 預測結果: **Fail (異常)**")
-                        st.metric("異常機率 (Confidence)", f"{score:.2%}")
-                        st.warning("建議行動：檢查 Sensor 數值是否偏離製程規範。")
-                    else:
-                        st.success(f"✅ 預測結果: **Pass (正常)**")
-                        st.metric("信心水準", f"{score:.2%}")
-                else:
-                    st.error("無法解析預測結果，欄位名稱不符。")
-                    st.write(prediction.columns)
-            except Exception as e:
-                st.error(f"預測執行錯誤: {e}")
-
-        st.markdown("---")
-        st.subheader("📂 批次上傳預測")
-        uploaded_file = st.file_uploader("上傳 CSV 檔案 (需包含所有感測器欄位)", type="csv")
+        st.subheader("📂 批次預測 & Fail Ranking")
+        st.info("上傳 CSV 檔案，系統將自動篩選出 **高風險 (High Probability of Fail)** 的晶片。")
+        
+        uploaded_file = st.file_uploader("上傳測試數據 (CSV)", type="csv")
         if uploaded_file and model:
             try:
                 batch_df = pd.read_csv(uploaded_file)
-                # 檢查關鍵欄位是否存在
-                missing_cols = [col for col in required_features if col not in batch_df.columns]
+                predictions = predict_model(model, data=batch_df)
                 
-                if not missing_cols:
-                    predictions = predict_model(model, data=batch_df)
-                    st.success("✅ 批次預測完成！")
-                    st.write(predictions.head())
+                # 確保欄位名稱一致
+                lbl_col = 'prediction_label'
+                score_col = 'prediction_score'
+                
+                if lbl_col in predictions.columns:
+                    # --- 關鍵功能：Fail Ranking ---
+                    st.markdown("### 🔥 高風險晶片排行榜 (Top Failures)")
                     
-                    # 下載結果
+                    # 篩選預測為 Fail (1) 的資料
+                    fail_df = predictions[predictions[lbl_col] == 1].copy()
+                    
+                    if not fail_df.empty:
+                        # 依照分數排序 (分數越高代表越像 Fail)
+                        fail_df = fail_df.sort_values(by=score_col, ascending=False)
+                        
+                        # 顯示前 10 名
+                        st.dataframe(
+                            fail_df.head(10).style.background_gradient(subset=[score_col], cmap='Reds'),
+                            use_container_width=True
+                        )
+                        st.warning(f"⚠️ 共發現 {len(fail_df)} 個潛在異常晶片！建議優先檢查上表中的項目。")
+                    else:
+                        st.success("🎉 太棒了！本批次數據中沒有發現預測為 Fail 的晶片。")
+                    
+                    # 下載完整結果
                     csv = predictions.to_csv(index=False).encode('utf-8')
-                    st.download_button("📥 下載預測結果", csv, "predictions.csv", "text/csv")
+                    st.download_button("📥 下載完整預測報告", csv, "predictions_with_ranking.csv", "text/csv")
                 else:
-                    st.error(f"❌ 檔案缺少以下欄位: {missing_cols[:3]}...")
+                    st.error("預測結果欄位不如預期，無法生成排行榜。")
             except Exception as e:
-                st.error(f"檔案讀取失敗: {e}")
+                st.error(f"批次處理失敗: {e}")
 
 # === Tab 2: 模型解釋 (SHAP) ===
 with tab2:
-    st.header("🧠 模型解釋：為什麼會 Fail？")
-    st.info("此頁面展示 SHAP (SHapley Additive exPlanations) 分析，幫助工程師理解哪些感測器數值對良率影響最大。")
+    st.header("🧠 SHAP 模型解釋")
+    # 支援多個可能的圖片路徑
+    shap_paths = [
+        'output/automl_reports/shap_summary_plot.png', # Step 1 可能產生的路徑
+        'reports/SHAP Summary.png', 
+        'output/shap_plots/shap_summary_plot.png'
+    ]
     
-    # 顯示靜態生成的 SHAP 圖
-    shap_img_path = os.path.join("reports", "SHAP Summary.png")
-    if os.path.exists(shap_img_path):
-        st.image(shap_img_path, caption="全域特徵重要性 (Global Feature Importance)", use_column_width=True)
-    else:
-        st.warning("⚠️ 尚未生成 SHAP Summary 圖表。請確認 train_upgrade.py 已完整執行。")
-        
-    st.markdown("### 💡 如何解讀？")
-    st.markdown("""
-    - **特徵排序**：由上而下代表影響力由大到小。
-    - **顏色**：紅色代表數值較高，藍色代表數值較低。
-    - **SHAP Value**：向右偏代表增加 Fail 機率，向左偏代表增加 Pass 機率。
-    """)
+    img_found = False
+    for p in shap_paths:
+        if os.path.exists(p):
+            st.image(p, caption="Feature Importance (SHAP)", use_column_width=True)
+            img_found = True
+            break
+            
+    if not img_found:
+        st.warning("⚠️ 尚未生成 SHAP 圖表。請執行 `scripts/05_explain_model.py` 或確認路徑。")
 
-# === Tab 3: 模型效能報告 ===
+# === Tab 3: 模型效能報告 (整合 Step 1 結果) ===
 with tab3:
-    st.header("🏆 多模型評估報告")
+    st.header("🏆 模型效能儀表板")
     
-    # 1. 顯示比較表格
-    csv_path = os.path.join("reports", "model_comparison.csv")
+    # 1. 比較表格
+    # Step 1 生成的是 'model_comparison_benchmark.csv'
+    csv_path = 'reports/model_comparison_benchmark.csv'
     if os.path.exists(csv_path):
-        st.subheader("模型指標排行榜")
+        st.subheader("模型基準測試 (Benchmark)")
         df_metrics = pd.read_csv(csv_path)
-        st.dataframe(df_metrics.style.highlight_max(axis=0, subset=['AUC', 'Recall', 'F1'], color='lightgreen'))
-        st.caption("註：Recall (召回率) 對於偵測半導體失效最為重要。")
+        # 簡單清理表格
+        if 'Unnamed: 0' in df_metrics.columns:
+            df_metrics = df_metrics.drop(columns=['Unnamed: 0'])
+        st.dataframe(df_metrics.style.highlight_max(axis=0, color='lightgreen'))
     else:
-        st.warning("⚠️ 尚未找到 model_comparison.csv，請先執行 train_upgrade.py")
+        st.info("ℹ️ 尚未找到模型比較表 (model_comparison_benchmark.csv)。")
 
-    # 2. 顯示圖表 Gallery
-    st.subheader("📊 詳細圖表")
+    # 2. 圖表展示
+    st.subheader("📊 視覺化評估")
+    
+    # 定義圖表路徑 (根據 Step 1 的輸出設定)
+    # Step 1 存到 output/automl_reports/
+    img_dir = 'output/automl_reports' 
+    
     col_a, col_b = st.columns(2)
     
     with col_a:
+        st.markdown("**學習曲線 (Learning Curve) - 過擬合檢查**")
+        p = os.path.join(img_dir, 'learning_curve.png')
+        if os.path.exists(p):
+            st.image(p, use_column_width=True)
+        else:
+            st.info("(尚無學習曲線圖)")
+            
         st.markdown("**混淆矩陣 (Confusion Matrix)**")
-        cm_path = os.path.join("reports", "Confusion Matrix.png")
-        if os.path.exists(cm_path):
-            st.image(cm_path, use_column_width=True)
+        p = os.path.join(img_dir, 'confusion_matrix.png')
+        if os.path.exists(p):
+            st.image(p, use_column_width=True)
         else:
-            st.info("*(圖表未生成)*")
-
-        st.markdown("**PR 曲線 (Precision-Recall)**")
-        pr_path = os.path.join("reports", "Precision Recall.png")
-        if os.path.exists(pr_path):
-            st.image(pr_path, use_column_width=True)
-        else:
-             st.info("*(圖表未生成)*")
+            st.info("(尚無混淆矩陣圖)")
 
     with col_b:
-        st.markdown("**ROC 曲線 (AUC)**")
-        auc_path = os.path.join("reports", "AUC.png")
-        if os.path.exists(auc_path):
-            st.image(auc_path, use_column_width=True)
+        st.markdown("**AUC 曲線 (ROC Curve)**")
+        p = os.path.join(img_dir, 'auc_roc_curve.png')
+        if os.path.exists(p):
+            st.image(p, use_column_width=True)
         else:
-            st.info("*(圖表未生成)*")
-            
-        st.markdown("**學習曲線 (Learning Curve)**")
-        lc_path = os.path.join("reports", "Learning Curve.png")
-        if os.path.exists(lc_path):
-            st.image(lc_path, use_column_width=True)
-        else:
-             st.info("ℹ️ 學習曲線未生成 (可能已跳過或運算中)")
+            st.info("(尚無 AUC 圖)")
 
-st.sidebar.info(f"當前使用模型: {model.__class__.__name__ if model else '未載入'}")
+        st.markdown("**特徵重要性 (Feature Importance)**")
+        p = os.path.join(img_dir, 'feature_importance.png')
+        if os.path.exists(p):
+            st.image(p, use_column_width=True)
+        else:
+            st.info("(尚無特徵重要性圖)")
